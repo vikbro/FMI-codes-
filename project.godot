@@ -18,6 +18,15 @@ config/icon="res://sprites/icon.svg"
 
 Signals="*uid://bjs3tltsgdhmn"
 
+[file_customization]
+
+folder_colors={
+"res://music/": "red",
+"res://scenes/": "purple",
+"res://scripts/": "yellow",
+"res://sprites/": "green"
+}
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
