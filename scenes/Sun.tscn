@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://chrgsuib5ef5k"]
+
+[ext_resource type="Script" uid="uid://danwfvf8m7uyu" path="res://scripts/sun.gd" id="1_5fsc2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kpfv7"]
+
+[node name="RigidBody2D" type="RigidBody2D" unique_id=874118908]
+script = ExtResource("1_5fsc2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1886212509]
+shape = SubResource("CircleShape2D_kpfv7")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=382620570]
