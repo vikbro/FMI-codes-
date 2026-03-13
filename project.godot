@@ -21,7 +21,8 @@ Signals="*uid://bjs3tltsgdhmn"
 [file_customization]
 
 folder_colors={
-"res://music/": "red",
+"res://audio/": "red",
+"res://data/": "orange",
 "res://scenes/": "purple",
 "res://scripts/": "yellow",
 "res://sprites/": "green"
