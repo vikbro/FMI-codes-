@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://chrgsuib5ef5k"]
 
 [ext_resource type="Script" uid="uid://danwfvf8m7uyu" path="res://scripts/sun.gd" id="1_5fsc2"]
+[ext_resource type="Texture2D" uid="uid://tn5xpbybrnwn" path="res://sprites/Sun-kingdom_128(1).png" id="2_s0bcd"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kpfv7"]
 
@@ -12,3 +13,6 @@ scale = Vector2(150, 150)
 shape = SubResource("CircleShape2D_kpfv7")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=382620570]
+position = Vector2(2.4999933, 54.999924)
+scale = Vector2(1.285547, 1.2945313)
+texture = ExtResource("2_s0bcd")
