@@ -4,7 +4,6 @@ var vector : Vector2
 var R
 var L
 var r = 10
-var launch_traj
 var direction: Vector2
 var orbit_vector: Vector2
 var vx
@@ -21,19 +20,19 @@ func _draw() -> void:
 
 func _process(delta: float) -> void:
 	var theta = - await Event.angle_input
-	if theta >= 0 || theta < -180:
+	if theta >= 0 || theta <= -180 || theta == -90:
 		pass
 	else:
 		print(-theta)
-		var x = 10 * cos(deg_to_rad(theta))
-		var y = 10 * sin(deg_to_rad(theta))
+		var x = 20 * cos(deg_to_rad(theta))
+		var y = 20 * sin(deg_to_rad(theta))
 		R = abs(x/cos(deg_to_rad(theta)))
-		direction = abs(y/2) * Vector2(x, y)
-		L = abs(theta) + rad_to_deg(atan((sqrt(x * x + y * y) * cos(deg_to_rad(theta))) / r))
-		vx =  (R * cos(deg_to_rad(L)) * cos(deg_to_rad((L - theta))) + abs(y/2) * x)
-		vy = - (R * sin(deg_to_rad((90 - L))) * cos(deg_to_rad((L - theta))) + abs(y/2) * y)
+		direction = 4 * Vector2(x, y)
+		L = theta + rad_to_deg(atan((sqrt(x * x + y * y) * cos(deg_to_rad(theta))) / r))
+		vx =  (direction.x  + R * cos(deg_to_rad(L)) * cos(deg_to_rad(L - theta)))
+		vy =  (direction.y + R * cos(deg_to_rad(90 - L)) * cos(deg_to_rad(L - theta)))
 		vector = Vector2(x, y)
-		orbit_vector = Vector2(vx,  vy)
+		orbit_vector = Vector2(vx, vy)
 		var speed = Vector2(0, orbit_vector.y)
 		var height = Vector2(orbit_vector.x, 0)
 		queue_redraw()
