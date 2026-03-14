@@ -1,15 +1,11 @@
 [gd_scene format=3 uid="uid://cly8u8om5uh2u"]
 
 [ext_resource type="Script" uid="uid://driibcm7hw271" path="res://scripts/test/planet.gd" id="1_pbqvt"]
-<<<<<<< HEAD
-[ext_resource type="Texture2D" uid="uid://d1606m5ibk1bv" path="res://sprites/planets/sprite-sheet1.png" id="2_rg3is"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_pbqvt"]
-=======
 [ext_resource type="Texture2D" uid="uid://dmqnm3p74clgl" path="res://sprites/test2.png" id="3_rg3is"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8lqpq"]
->>>>>>> viki
+
 radius = 200.0
 
 [sub_resource type="Animation" id="Animation_iwbf0"]
