@@ -52,6 +52,13 @@ _data = {
 &"new_animation": SubResource("Animation_2ysvc")
 }
 
+[sub_resource type="Curve2D" id="Curve2D_vjtqc"]
+bake_interval = 0.01
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 641, -136, -100, -100, 135.27272, 145.45454, 1136, 10, 0, 0, 0, 0, 1267, 344, 0, 0, 0, 0, 1244, 624, 0, 0, 0, 0, 828, 862, 0, 0, 0, 0, 187, 761, 0, 0, 0, 0, -16, 309, 0, 0, 0, 0, 144, -38, 0, 0, 0, 0, 641, -136)
+}
+point_count = 9
+
 [node name="MainMenu" type="Control" unique_id=666836823]
 layout_mode = 3
 anchors_preset = 15
@@ -63,7 +70,7 @@ grow_vertical = 2
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1445291073]
 visible = false
 sprite_frames = SubResource("SpriteFrames_6jbdy")
-frame_progress = 0.46041802
+frame_progress = 0.5180902
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1028763938]
 libraries/ = SubResource("AnimationLibrary_xpiny")
@@ -74,3 +81,7 @@ position = Vector2(599, 326)
 rotation = 0.5940429
 texture = ExtResource("1_vjtqc")
 hframes = 17
+
+[node name="Path2D" type="Path2D" parent="." unique_id=415425501]
+position = Vector2(-16, 27)
+curve = SubResource("Curve2D_vjtqc")
