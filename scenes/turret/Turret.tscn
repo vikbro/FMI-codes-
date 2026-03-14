@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://c2tbkvy45svui"]
+
+[ext_resource type="Script" uid="uid://cr60n56pfki4s" path="res://scripts/turrets/turret.gd" id="1_1l6vw"]
+[ext_resource type="Texture2D" uid="uid://c3oosxpkdlkdr" path="res://sprites/icon.svg" id="2_iduhk"]
+[ext_resource type="Resource" uid="uid://wvvu136hdxhl" path="res://data/default_turret.tres" id="2_p64hc"]
+[ext_resource type="Script" uid="uid://dg0juust2ync2" path="res://scripts/components/detection_component.gd" id="2_xmtae"]
+[ext_resource type="Script" uid="uid://bluj55vawy5hu" path="res://scripts/components/health_component.gd" id="3_iduhk"]
+[ext_resource type="Resource" uid="uid://b376u7k3hncms" path="res://data/default_bullet.tres" id="3_rnh5d"]
+[ext_resource type="Script" uid="uid://4plc0lay42xk" path="res://scripts/components/shoot_component.gd" id="4_v4lwv"]
+[ext_resource type="PackedScene" uid="uid://byssa0lwbb3ts" path="res://scenes/bullet/bullet.tscn" id="8_t4bc6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v4lwv"]
+radius = 40.0
+
+[node name="Turret" type="Node2D" unique_id=745407530 node_paths=PackedStringArray("health_component", "shoot_component", "detection_component") groups=["Turret"]]
+script = ExtResource("1_1l6vw")
+stats = ExtResource("2_p64hc")
+bullet_stats = ExtResource("3_rnh5d")
+health_component = NodePath("HealtComponent")
+shoot_component = NodePath("ShootComponent")
+detection_component = NodePath("DetectionComponent")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=5918885]
+scale = Vector2(0.453125, 0.453125)
+texture = ExtResource("2_iduhk")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=604293616]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=982405566]
+shape = SubResource("CircleShape2D_v4lwv")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=386150459]
+
+[node name="DetectionComponent" type="Node" parent="." unique_id=461813628 node_paths=PackedStringArray("area", "collision_shape")]
+script = ExtResource("2_xmtae")
+area = NodePath("../Area2D")
+collision_shape = NodePath("../Area2D/CollisionShape2D")
+
+[node name="HealtComponent" type="Node" parent="." unique_id=2086260882]
+script = ExtResource("3_iduhk")
+
+[node name="ShootComponent" type="Node" parent="." unique_id=1400431943]
+script = ExtResource("4_v4lwv")
+bullet_scene = ExtResource("8_t4bc6")
+
+[node name="Upgrades" type="Node2D" parent="." unique_id=659972680]
