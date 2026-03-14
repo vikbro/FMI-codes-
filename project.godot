@@ -24,6 +24,7 @@ buses/default_bus_layout="uid://efl4tnrxe8fl"
 
 [autoload]
 
+Signals="*uid://bjs3tltsgdhmn"
 Event="*uid://dkmiy275bnsxe"
 
 [file_customization]
@@ -36,25 +37,12 @@ folder_colors={
 "res://sprites/": "green"
 }
 
-[file_customization]
+[layer_names]
 
-folder_colors={
-"res://audio/": "red",
-"res://data/": "orange",
-"res://scenes/": "purple",
-"res://scripts/": "yellow",
-"res://sprites/": "green"
-}
-
-[file_customization]
-
-folder_colors={
-"res://audio/": "red",
-"res://data/": "orange",
-"res://scenes/": "purple",
-"res://scripts/": "yellow",
-"res://sprites/": "green"
-}
+2d_physics/layer_1="planet"
+2d_physics/layer_2="satelite"
+2d_physics/layer_3="bullet"
+2d_physics/layer_4="enemy"
 
 [physics]
 

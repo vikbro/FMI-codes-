@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://cly8u8om5uh2u"]
+
+[ext_resource type="Script" uid="uid://driibcm7hw271" path="res://scripts/test/planet.gd" id="1_pbqvt"]
+[ext_resource type="Texture2D" uid="uid://d1606m5ibk1bv" path="res://sprites/planets/sprite-sheet1.png" id="2_rg3is"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pbqvt"]
+resource_local_to_scene = true
+radius = 201.165
+
+[sub_resource type="Animation" id="Animation_iwbf0"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_2ysvc"]
+resource_name = "new_animation"
+length = 1.0666734
+loop_mode = 1
+step = 0.06666667
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0s5if"]
+_data = {
+&"RESET": SubResource("Animation_iwbf0"),
+&"new_animation": SubResource("Animation_2ysvc")
+}
+
+[node name="Planet" type="Node2D" unique_id=276595807]
+script = ExtResource("1_pbqvt")
+planet_texture = ExtResource("2_rg3is")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=875954802]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1611782553]
+shape = SubResource("CircleShape2D_pbqvt")
+
+[node name="PlantSprite" type="Sprite2D" parent="." unique_id=180411245]
+texture = ExtResource("2_rg3is")
+hframes = 17
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=879317457]
+libraries/ = SubResource("AnimationLibrary_0s5if")
+autoplay = &"new_animation"

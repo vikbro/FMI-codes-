@@ -7,7 +7,7 @@
 [ext_resource type="Script" uid="uid://bluj55vawy5hu" path="res://scripts/components/health_component.gd" id="3_iduhk"]
 [ext_resource type="Resource" uid="uid://b376u7k3hncms" path="res://data/default_bullet.tres" id="3_rnh5d"]
 [ext_resource type="Script" uid="uid://4plc0lay42xk" path="res://scripts/components/shoot_component.gd" id="4_v4lwv"]
-[ext_resource type="PackedScene" uid="uid://byssa0lwbb3ts" path="res://scenes/bullet/bullet.tscn" id="8_t4bc6"]
+[ext_resource type="PackedScene" uid="uid://byssa0lwbb3ts" path="res://scenes/bullet/Bullet.tscn" id="8_t4bc6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_v4lwv"]
 radius = 40.0
