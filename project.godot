@@ -24,7 +24,27 @@ buses/default_bus_layout="uid://efl4tnrxe8fl"
 
 [autoload]
 
-Signals="*uid://bjs3tltsgdhmn"
+Event="*uid://dkmiy275bnsxe"
+
+[file_customization]
+
+folder_colors={
+"res://audio/": "red",
+"res://data/": "orange",
+"res://scenes/": "purple",
+"res://scripts/": "yellow",
+"res://sprites/": "green"
+}
+
+[file_customization]
+
+folder_colors={
+"res://audio/": "red",
+"res://data/": "orange",
+"res://scenes/": "purple",
+"res://scripts/": "yellow",
+"res://sprites/": "green"
+}
 
 [file_customization]
 

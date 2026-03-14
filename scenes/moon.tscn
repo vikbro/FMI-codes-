@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://148ovvtp1on2"]
+
+[ext_resource type="Texture2D" uid="uid://c3oosxpkdlkdr" path="res://sprites/icon.svg" id="1_530pw"]
+[ext_resource type="Script" uid="uid://db4pitcaftv67" path="res://scenes/Moon.gd" id="1_q6it2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5kn0a"]
+
+[node name="RigidBody2D" type="RigidBody2D" unique_id=1229201611]
+script = ExtResource("1_q6it2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1958400316]
+scale = Vector2(5, 5)
+shape = SubResource("CircleShape2D_5kn0a")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1954657077]
+scale = Vector2(0.78125, 0.765625)
+texture = ExtResource("1_530pw")

@@ -1,10 +1,18 @@
 [gd_scene format=3 uid="uid://c5kmdilnux2qn"]
 
+[ext_resource type="Script" uid="uid://cpcc8dh5445a8" path="res://scenes/Earth.gd" id="1_2umt7"]
+[ext_resource type="Texture2D" uid="uid://c3oosxpkdlkdr" path="res://sprites/icon.svg" id="1_afhwv"]
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_0iepj"]
 
 [node name="RigidBody2D" type="RigidBody2D" unique_id=276760888]
+script = ExtResource("1_2umt7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=756458522]
+scale = Vector2(10, 10)
 shape = SubResource("CircleShape2D_0iepj")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1007484927]
+position = Vector2(0.9999962, -0.4999981)
+scale = Vector2(1.546875, 1.5703125)
+texture = ExtResource("1_afhwv")
