@@ -3,7 +3,7 @@ extends Node2D
 var vector : Vector2
 var R
 var L
-var r = 10
+var r = 10 #radius na planetata
 var direction: Vector2
 var orbit_vector: Vector2
 var vx
@@ -20,11 +20,11 @@ func _draw() -> void:
 
 func _process(delta: float) -> void:
 	var theta = - await Event.angle_input
-	if theta >= 0 || theta <= -180 || theta == -90:
+	if theta >= 0 || theta <= -180:
 		pass
 	else:
 		print(-theta)
-		var x = 20 * cos(deg_to_rad(theta))
+		var x = 20 * cos(deg_to_rad(theta)) #nqkyv coefficient izbei
 		var y = 20 * sin(deg_to_rad(theta))
 		R = abs(x/cos(deg_to_rad(theta)))
 		direction = 4 * Vector2(x, y)
@@ -33,7 +33,7 @@ func _process(delta: float) -> void:
 		vy =  (direction.y + R * cos(deg_to_rad(90 - L)) * cos(deg_to_rad(L - theta)))
 		vector = Vector2(x, y)
 		orbit_vector = Vector2(vx, vy)
-		var speed = Vector2(0, orbit_vector.y)
+		var speed = Vector2(0, orbit_vector.y) #trqbva ni tova
 		var height = Vector2(orbit_vector.x, 0)
 		queue_redraw()
 
