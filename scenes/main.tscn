@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://soy3puiqpes4"]
+[gd_scene format=3 uid="uid://bsrc3pns3fdgh"]
 
 [ext_resource type="Shader" uid="uid://c17dgnslw5167" path="res://scripts/shader/scroll.gdshader" id="1_q8u5g"]
 [ext_resource type="Texture2D" uid="uid://c7jmjurnk7dmw" path="res://sprites/JustStars.png" id="2_lhr70"]

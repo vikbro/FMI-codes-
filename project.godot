@@ -54,6 +54,35 @@ folder_colors={
 "res://sprites/": "green"
 }
 
+Event="*uid://dkmiy275bnsxe"
+
+[file_customization]
+
+folder_colors={
+"res://audio/": "red",
+"res://data/": "orange",
+"res://scenes/": "purple",
+"res://scripts/": "yellow",
+"res://sprites/": "green"
+}
+
+[layer_names]
+
+2d_physics/layer_1="planet"
+2d_physics/layer_2="satelite"
+2d_physics/layer_3="bullet"
+2d_physics/layer_4="enemy"
+
+[file_customization]
+
+folder_colors={
+"res://audio/": "red",
+"res://data/": "orange",
+"res://scenes/": "purple",
+"res://scripts/": "yellow",
+"res://sprites/": "green"
+}
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
