@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://xwvey418gd60"]
+
+[ext_resource type="Script" uid="uid://4ikfsnfi1sil" path="res://vector.gd" id="1_hm48i"]
+[ext_resource type="Script" uid="uid://t1sgqsc8uoby" path="res://line_edit.gd" id="2_nfnwc"]
+
+[node name="Node2D" type="Node2D" unique_id=2124579274]
+script = ExtResource("1_hm48i")
+
+[node name="Button" type="Button" parent="." unique_id=370865676]
+offset_left = 68.0
+offset_top = 35.0
+offset_right = 151.0
+offset_bottom = 67.0
+text = "p"
+
+[node name="Label" type="Label" parent="." unique_id=1840868244]
+offset_left = 34.0
+offset_top = 8.0
+offset_right = 163.0
+offset_bottom = 31.0
+text = "choose an angle:"
+
+[node name="LineEdit" type="LineEdit" parent="." unique_id=1139669122]
+offset_left = 164.0
+offset_top = 6.0
+offset_right = 232.5
+offset_bottom = 37.0
+script = ExtResource("2_nfnwc")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=637030861]
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
