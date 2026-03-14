@@ -1,20 +1,5 @@
 [gd_scene format=3 uid="uid://wa0no123flne"]
 
-[ext_resource type="Texture2D" uid="uid://d1606m5ibk1bv" path="res://sprites/planets/sprite-sheet1.png" id="1_vjtqc"]
-[ext_resource type="PackedScene" uid="uid://cly8u8om5uh2u" path="res://scenes/planets/Planet.tscn" id="2_iwbf0"]
-[ext_resource type="PackedScene" uid="uid://bdqll456gsmki" path="res://scenes/sattelites/Sattelite.tscn" id="3_2ysvc"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_6jbdy"]
-animations = [{
-"frames": [{
-"duration": 0.6,
-"texture": ExtResource("1_vjtqc")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
 [node name="MainMenu" type="Control" unique_id=666836823]
 layout_mode = 3
 anchors_preset = 15
@@ -22,19 +7,3 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1445291073]
-visible = false
-sprite_frames = SubResource("SpriteFrames_6jbdy")
-frame_progress = 0.5180902
-
-[node name="Planet" parent="." unique_id=276595807 instance=ExtResource("2_iwbf0")]
-position = Vector2(283, 182)
-planet_scale = 0.5
-
-[node name="Planet2" parent="." unique_id=1662316851 instance=ExtResource("2_iwbf0")]
-position = Vector2(561, 310)
-scale = Vector2(0.74, 0.74)
-planet_scale = 0.5
-
-[node name="SatteliteOrbit" parent="." unique_id=295821271 instance=ExtResource("3_2ysvc")]
