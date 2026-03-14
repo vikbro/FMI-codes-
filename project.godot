@@ -43,6 +43,10 @@ Event="*uid://dkmiy275bnsxe"
 2d_physics/layer_3="bullet"
 2d_physics/layer_4="enemy"
 
+[global_group]
+
+enemies=""
+
 [layer_names]
 
 2d_physics/layer_1="planet"

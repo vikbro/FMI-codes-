@@ -9,9 +9,13 @@
 [ext_resource type="Texture2D" uid="uid://b006jv4o26l73" path="res://sprites/ui/UiText.png" id="7_3p2gp"]
 [ext_resource type="PackedScene" uid="uid://cly8u8om5uh2u" path="res://scenes/planets/Planet.tscn" id="8_cvmbd"]
 [ext_resource type="PackedScene" uid="uid://bdqll456gsmki" path="res://scenes/sattelites/Sattelite.tscn" id="9_ft6cd"]
+[ext_resource type="PackedScene" uid="uid://bo5ah6yivdfnt" path="res://scenes/ui/user_info.tscn" id="10_choun"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jyhfs"]
 shader = ExtResource("1_q8u5g")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_choun"]
+radius = 27.294687
 
 [node name="Main" type="Node2D" unique_id=1022631029]
 
@@ -101,3 +105,13 @@ planet_scale = 0.225
 [node name="Planet2" parent="." unique_id=1660849869 instance=ExtResource("8_cvmbd")]
 position = Vector2(504, 437)
 planet_scale = 0.225
+
+[node name="User info" parent="." unique_id=570392068 instance=ExtResource("10_choun")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=98350747]
+position = Vector2(693, 308)
+collision_layer = 8
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=177604695]
+shape = SubResource("CircleShape2D_choun")

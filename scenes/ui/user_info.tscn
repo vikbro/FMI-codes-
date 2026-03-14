@@ -1,37 +1,44 @@
 [gd_scene format=3 uid="uid://bo5ah6yivdfnt"]
 
-[ext_resource type="Texture2D" uid="uid://bpqc2ov6u4b0y" path="res://sprites/UiTextNew.png" id="1_yw532"]
+[ext_resource type="Texture2D" uid="uid://bex1n6df2u1ww" path="res://sprites/ui/FinalUIText.png" id="1_bkxlf"]
 [ext_resource type="FontFile" uid="uid://dasc61xev86m4" path="res://sprites/DS-DIGI.TTF" id="2_bkxlf"]
+[ext_resource type="Script" uid="uid://bl5n6rdoovurp" path="res://scripts/ui/research_ui.gd" id="2_bna67"]
 [ext_resource type="Texture2D" uid="uid://cwoaqolxapti5" path="res://sprites/icons/Magnifier.png" id="3_bna67"]
+[ext_resource type="Texture2D" uid="uid://cuwgqeg1whu2d" path="res://sprites/ui/Ui1.png" id="4_bna67"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pvibf"]
-texture = ExtResource("1_yw532")
-texture_margin_left = 222.0
-texture_margin_top = 60.0
-texture_margin_right = 74.0
-texture_margin_bottom = 75.0
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pvibf"]
+bg_color = Color(0.1288298, 0.1288298, 0.12882975, 0.3019608)
 
 [node name="User info" type="CanvasLayer" unique_id=570392068]
 
-[node name="Control" type="Control" parent="." unique_id=1996506368]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Panel" type="Panel" parent="." unique_id=494196733]
-custom_minimum_size = Vector2(500, 50)
+[node name="MarginContainer2" type="MarginContainer" parent="." unique_id=2038935117]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -456.0
-offset_right = 513.0
-offset_bottom = 221.0
+offset_left = -274.0
+offset_right = 314.0
+offset_bottom = 124.0
 grow_horizontal = 2
-size_flags_horizontal = 4
-theme_override_styles/panel = SubResource("StyleBoxTexture_pvibf")
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
 
-[node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=329287972]
+[node name="InfoTab" type="Panel" parent="MarginContainer2" unique_id=1309095255]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_pvibf")
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer2/InfoTab" unique_id=2025769224]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_bkxlf")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer2/InfoTab/TextureRect" unique_id=89391018]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -39,34 +46,45 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 30
-theme_override_constants/margin_top = 30
+theme_override_constants/margin_top = 15
 theme_override_constants/margin_right = 30
-theme_override_constants/margin_bottom = 30
+theme_override_constants/margin_bottom = 15
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer" unique_id=1809222937]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer2/InfoTab/TextureRect/MarginContainer" unique_id=1311468966]
 layout_mode = 2
+alignment = 1
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Panel/MarginContainer/HBoxContainer" unique_id=289267417]
-custom_minimum_size = Vector2(160, 0)
+[node name="RichTextLabel" type="Label" parent="MarginContainer2/InfoTab/TextureRect/MarginContainer/HBoxContainer" unique_id=1090151334]
+custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
-theme_override_fonts/normal_font = ExtResource("2_bkxlf")
-theme_override_fonts/bold_font = ExtResource("2_bkxlf")
-theme_override_fonts/bold_italics_font = ExtResource("2_bkxlf")
-theme_override_font_sizes/normal_font_size = 64
-text = "0
-"
+theme_override_fonts/font = ExtResource("2_bkxlf")
+theme_override_font_sizes/font_size = 32
+text = "Nan"
 horizontal_alignment = 2
 vertical_alignment = 1
+script = ExtResource("2_bna67")
 
-[node name="TextureRect" type="TextureRect" parent="Panel/MarginContainer/HBoxContainer" unique_id=1788263853]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer2/InfoTab/TextureRect/MarginContainer/HBoxContainer" unique_id=856400037]
 layout_mode = 2
 texture = ExtResource("3_bna67")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1495455726]
-visible = false
-offset_right = 606.0
-offset_bottom = 85.0
-texture = ExtResource("1_yw532")
-region_rect = Rect2(0, 0, 900, 600)
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1720821112]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -126.0
+offset_bottom = 126.0
+grow_horizontal = 0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Button" type="Button" parent="MarginContainer" unique_id=1009535838]
+layout_mode = 2
+icon = ExtResource("4_bna67")
+expand_icon = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=573893481]

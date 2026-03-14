@@ -7,7 +7,7 @@
 [ext_resource type="Script" uid="uid://xvocnikxrcq" path="res://scripts/components/resource_generator_component.gd" id="4_io4qm"]
 [ext_resource type="Script" uid="uid://bmrkph4yjbju2" path="res://scripts/resource_ui.gd" id="5_0s5if"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_2ep58"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_io4qm"]
 radius = 200.0
 
 [sub_resource type="Animation" id="Animation_iwbf0"]
@@ -56,9 +56,10 @@ resource_generator_component = NodePath("ResourceGeneratorComponent")
 progress_bars = NodePath("ProgressBars")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=875954802]
+collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1611782553]
-shape = SubResource("CircleShape2D_2ep58")
+shape = SubResource("CircleShape2D_io4qm")
 
 [node name="PlantSprite" type="Sprite2D" parent="." unique_id=180411245]
 texture = ExtResource("3_8lqpq")

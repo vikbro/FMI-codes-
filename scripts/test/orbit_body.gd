@@ -9,12 +9,26 @@ var _switching := false
 func _ready() -> void:
 	$Area2D.area_entered.connect(_on_area_entered)
 
+	# Generate the initial orbit here so we are guaranteed the curve exists
+	# before _process() runs, regardless of whether orbit.gd's _ready() ran first.
+	if current_planet:
+		var orbit_path := get_parent() as Path2D
+		orbit_path.generate_orbit(current_planet.global_position, current_planet.get("gravity_radius"))
+	else:
+		push_warning("OrbitBody: no current_planet assigned — satellite will not move.")
+
 func _process(delta: float) -> void:
+	var orbit_path := get_parent() as Path2D
+	# Guard: do nothing if the curve hasn't been generated yet
+	if orbit_path.curve.get_baked_length() == 0.0:
+		return
 	progress_ratio = fmod(progress_ratio + orbit_speed * _speed_sign * delta, 1.0)
 
 func _on_area_entered(area: Area2D) -> void:
 	var new_planet: Node2D = area.get_parent()
 	if new_planet == current_planet or _switching:
+		return
+	if not new_planet.get("gravity_radius"):
 		return
 	_switching = true
 	switch_orbit(new_planet)
@@ -32,7 +46,6 @@ func switch_orbit(new_planet: Node2D) -> void:
 		orbit_path.curve.sample_baked(baked_length * current_ratio)
 	).normalized()
 
-	#var new_radius: float = new_planet.get("gravity_radius") * 0.6
 	var new_radius: float = new_planet.get("gravity_radius")
 	orbit_path.generate_orbit(new_planet.global_position, new_radius)
 	current_planet = new_planet
