@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://bdqll456gsmki"]
+
+[ext_resource type="Script" uid="uid://dse0rsccoj62x" path="res://scripts/test/orbit.gd" id="1_m7l0n"]
+[ext_resource type="Script" uid="uid://001fhnlghhyp" path="res://scripts/test/orbit_body.gd" id="2_5usku"]
+[ext_resource type="Texture2D" uid="uid://c3oosxpkdlkdr" path="res://sprites/icon.svg" id="3_3osk5"]
+
+[sub_resource type="Curve2D" id="Curve2D_mmnps"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0cy6b"]
+radius = 12.794302
+
+[node name="SatteliteOrbit" type="Path2D" unique_id=295821271]
+curve = SubResource("Curve2D_mmnps")
+script = ExtResource("1_m7l0n")
+
+[node name="Sattelite" type="PathFollow2D" parent="." unique_id=1093051201]
+position = Vector2(300, 0)
+rotation = 1.5707964
+script = ExtResource("2_5usku")
+orbit_speed = 0.3
+
+[node name="Sprite2D" type="Sprite2D" parent="Sattelite" unique_id=1538337645]
+scale = Vector2(0.18884648, 0.18884648)
+texture = ExtResource("3_3osk5")
+
+[node name="Area2D" type="Area2D" parent="Sattelite" unique_id=254811888]
+collision_layer = 2
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sattelite/Area2D" unique_id=1103051432]
+shape = SubResource("CircleShape2D_0cy6b")
+debug_color = Color(0.9683694, 0, 0.4713778, 0.41960785)

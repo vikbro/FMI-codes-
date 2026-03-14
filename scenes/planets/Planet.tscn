@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://cly8u8om5uh2u"]
+
+[ext_resource type="Script" uid="uid://driibcm7hw271" path="res://scripts/test/planet.gd" id="1_pbqvt"]
+
+[ext_resource type="Texture2D" uid="uid://dmqnm3p74clgl" path="res://sprites/test2.png" id="3_rg3is"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8lqpq"]
+
+radius = 200.0
+
+[sub_resource type="Animation" id="Animation_iwbf0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlantSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_2ysvc"]
+resource_name = "new_animation"
+length = 1.0666734
+loop_mode = 1
+step = 0.06666667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlantSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.06666667, 0.13333334, 0.20000002, 0.26666668, 0.33333334, 0.40000004, 0.4666667, 0.53333336, 0.6, 0.6666667, 0.73333335, 0.8000001, 0.86666673, 0.9333334, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0s5if"]
+_data = {
+&"RESET": SubResource("Animation_iwbf0"),
+&"new_animation": SubResource("Animation_2ysvc")
+}
+
+[node name="Planet" type="Node2D" unique_id=276595807]
+script = ExtResource("1_pbqvt")
+planet_texture = ExtResource("3_rg3is")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=875954802]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1611782553]
+shape = SubResource("CircleShape2D_8lqpq")
+
+[node name="PlantSprite" type="Sprite2D" parent="." unique_id=180411245]
+position = Vector2(-44.99997, 9.000004)
+scale = Vector2(0.21549483, 0.21549483)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=879317457]
+libraries/ = SubResource("AnimationLibrary_0s5if")
+autoplay = &"RESET"
