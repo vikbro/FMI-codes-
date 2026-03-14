@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="TurretStats" format=3 uid="uid://wvvu136hdxhl"]
+
+[ext_resource type="Script" uid="uid://ddh1s0s7obys5" path="res://scripts/resources/turret_stats.gd" id="1_lys5k"]
+
+[resource]
+script = ExtResource("1_lys5k")
+metadata/_custom_type_script = "uid://ddh1s0s7obys5"

@@ -8,15 +8,33 @@
 
 config_version=5
 
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
 [application]
 
 config/name="SafeSpace"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://sprites/icon.svg"
 
+[audio]
+
+buses/default_bus_layout="uid://efl4tnrxe8fl"
+
 [autoload]
 
 Signals="*uid://bjs3tltsgdhmn"
+
+[file_customization]
+
+folder_colors={
+"res://audio/": "red",
+"res://data/": "orange",
+"res://scenes/": "purple",
+"res://scripts/": "yellow",
+"res://sprites/": "green"
+}
 
 [physics]
 
