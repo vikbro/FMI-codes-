@@ -44,16 +44,6 @@ folder_colors={
 2d_physics/layer_3="bullet"
 2d_physics/layer_4="enemy"
 
-[file_customization]
-
-folder_colors={
-"res://audio/": "red",
-"res://data/": "orange",
-"res://scenes/": "purple",
-"res://scripts/": "yellow",
-"res://sprites/": "green"
-}
-
 [physics]
 
 3d/physics_engine="Jolt Physics"

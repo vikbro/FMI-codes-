@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbo85vk5iw47p"
-path="res://.godot/imported/sprite-sheet.png-db80bce785abc2d23702865a0dae53ec.ctex"
+uid="uid://km6qo2s07kun"
+path="res://.godot/imported/RadarL1.png-3b386ac98fe54c227aa6fb3f8044faa0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/sprite-sheet.png"
-dest_files=["res://.godot/imported/sprite-sheet.png-db80bce785abc2d23702865a0dae53ec.ctex"]
+source_file="res://sprites/ui/RadarL1.png"
+dest_files=["res://.godot/imported/RadarL1.png-3b386ac98fe54c227aa6fb3f8044faa0.ctex"]
 
 [params]
 

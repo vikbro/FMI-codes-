@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://c7de0rjde074n"]
+
+[ext_resource type="Shader" uid="uid://c17dgnslw5167" path="res://scripts/shader/scroll.gdshader" id="1_0wfyh"]
+[ext_resource type="Texture2D" uid="uid://c7jmjurnk7dmw" path="res://sprites/JustStars.png" id="2_sugp2"]
+[ext_resource type="Texture2D" uid="uid://jpcswbhyxo2n" path="res://sprites/ui/RadarL1 1.png" id="3_tefeu"]
+[ext_resource type="Texture2D" uid="uid://km6qo2s07kun" path="res://sprites/ui/RadarL1.png" id="4_o6xl0"]
+[ext_resource type="Texture2D" uid="uid://cuwgqeg1whu2d" path="res://sprites/ui/Ui1.png" id="5_tipki"]
+[ext_resource type="Texture2D" uid="uid://bbe3jb46eharj" path="res://sprites/ui/Ui1circle.png" id="6_85g3d"]
+[ext_resource type="Texture2D" uid="uid://b006jv4o26l73" path="res://sprites/ui/UiText.png" id="7_o6xl0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jyhfs"]
+shader = ExtResource("1_0wfyh")
+
+[node name="Main" type="Node2D" unique_id=1022631029]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=868577212]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_jyhfs")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1571.0
+offset_top = -617.0
+offset_right = 6430.0
+offset_bottom = 3446.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_sugp2")
+stretch_mode = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=891671673]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1243846425]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer" unique_id=1470664227]
+custom_minimum_size = Vector2(500, 0)
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer" unique_id=946714951]
+layout_mode = 2
+alignment = 1
+
+[node name="TextureRect4" type="TextureRect" parent="CanvasLayer/MarginContainer/VBoxContainer" unique_id=1222071867]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("3_tefeu")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect6" type="TextureRect" parent="CanvasLayer/MarginContainer/VBoxContainer" unique_id=961474604]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("4_o6xl0")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect7" type="TextureRect" parent="CanvasLayer/MarginContainer/VBoxContainer" unique_id=1295688930]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("5_tipki")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect5" type="TextureRect" parent="CanvasLayer/MarginContainer/VBoxContainer" unique_id=1186908588]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("6_85g3d")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer" unique_id=1283373768]
+offset_right = 513.0
+offset_bottom = 634.0
+texture = ExtResource("7_o6xl0")
+patch_margin_left = 150
+patch_margin_top = 150
+patch_margin_right = 150
+patch_margin_bottom = 300
