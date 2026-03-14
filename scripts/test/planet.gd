@@ -17,16 +17,29 @@ class_name Planet
 		planet_scale = value
 		_update_scale()
 
+@export var resource_generator_component: ResourceGeneratorComponent
+@export var progress_bars: PlanetProgressBars
+
 func _ready() -> void:
 	_update_shape()
 	_update_sprite()
 	_update_scale()
 
+	if Engine.is_editor_hint():
+		return
+
+	if resource_generator_component:
+		assert(resource_generator_component.stats != null,
+			"Planet: ResourceGeneratorComponent has no stats assigned in the inspector!")
+		resource_generator_component.setup()
+
+	if progress_bars:
+		progress_bars.setup(resource_generator_component)
+
 func _update_shape() -> void:
 	var shape_node = get_node_or_null("Area2D/CollisionShape2D")
 	if shape_node == null:
 		return
-	# Always create a brand new shape — never mutate a potentially shared one
 	var new_shape = CircleShape2D.new()
 	new_shape.radius = gravity_radius
 	shape_node.shape = new_shape

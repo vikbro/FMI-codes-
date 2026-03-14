@@ -1,9 +1,13 @@
 [gd_scene format=3 uid="uid://cly8u8om5uh2u"]
 
 [ext_resource type="Script" uid="uid://driibcm7hw271" path="res://scripts/test/planet.gd" id="1_pbqvt"]
+[ext_resource type="Script" uid="uid://h5dcr4rkautv" path="res://scripts/components/resource_component.gd" id="3_0s5if"]
 [ext_resource type="Texture2D" uid="uid://liifm007gxcm" path="res://sprites/spritesheetEarth.png" id="3_8lqpq"]
+[ext_resource type="Resource" uid="uid://xvdsup6ocojt" path="res://data/default_resource_stats.tres" id="3_io4qm"]
+[ext_resource type="Script" uid="uid://xvocnikxrcq" path="res://scripts/components/resource_generator_component.gd" id="4_io4qm"]
+[ext_resource type="Script" uid="uid://bmrkph4yjbju2" path="res://scripts/resource_ui.gd" id="5_0s5if"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_pbqvt"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_2ep58"]
 radius = 200.0
 
 [sub_resource type="Animation" id="Animation_iwbf0"]
@@ -45,17 +49,18 @@ _data = {
 &"new_animation": SubResource("Animation_2ysvc")
 }
 
-[node name="Planet" type="Node2D" unique_id=276595807]
+[node name="Planet" type="Node2D" unique_id=276595807 node_paths=PackedStringArray("resource_generator_component", "progress_bars")]
 script = ExtResource("1_pbqvt")
 planet_texture = ExtResource("3_8lqpq")
+resource_generator_component = NodePath("ResourceGeneratorComponent")
+progress_bars = NodePath("ProgressBars")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=875954802]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1611782553]
-shape = SubResource("CircleShape2D_pbqvt")
+shape = SubResource("CircleShape2D_2ep58")
 
 [node name="PlantSprite" type="Sprite2D" parent="." unique_id=180411245]
-scale = Vector2(0.25, 0.25)
 texture = ExtResource("3_8lqpq")
 hframes = 3
 vframes = 2
@@ -63,3 +68,48 @@ vframes = 2
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=879317457]
 libraries/ = SubResource("AnimationLibrary_0s5if")
 autoplay = &"new_animation"
+
+[node name="ResourceComponent" type="Node" parent="." unique_id=709766478]
+script = ExtResource("3_0s5if")
+
+[node name="ResourceGeneratorComponent" type="Node" parent="." unique_id=1590192145]
+script = ExtResource("4_io4qm")
+stats = ExtResource("3_io4qm")
+
+[node name="ProgressBars" type="Control" parent="." unique_id=2085401415]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -2.0
+offset_top = 256.0
+offset_right = 38.0
+offset_bottom = 296.0
+script = ExtResource("5_0s5if")
+
+[node name="StorageCapacity" type="ProgressBar" parent="ProgressBars" unique_id=1219737688]
+visible = false
+modulate = Color(0, 1, 1, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.2
+anchor_top = 3.375
+anchor_right = -0.2
+anchor_bottom = 3.375
+offset_left = -331.0
+offset_top = -418.0
+offset_right = 335.0
+offset_bottom = -391.0
+metadata/_edit_use_anchors_ = true
+
+[node name="GenerationProgress" type="ProgressBar" parent="ProgressBars" unique_id=1999588903]
+modulate = Color(1, 1, 0, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.2
+anchor_top = 2.575
+anchor_right = -0.2
+anchor_bottom = 2.575
+offset_left = -331.0
+offset_top = -418.0
+offset_right = 335.0
+offset_bottom = -391.0
+metadata/_edit_use_anchors_ = true
