@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://bq14r5x4kul56"]
+
+[ext_resource type="Script" uid="uid://isj20t524rfr" path="res://scripts/test/test_upgrade.gd" id="1_m6svf"]
+[ext_resource type="PackedScene" uid="uid://c2tbkvy45svui" path="res://scenes/turret/Turret.tscn" id="2_x03ek"]
+
+[node name="TestUpgrade" type="Node2D" unique_id=1874819548]
+script = ExtResource("1_m6svf")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=798152091]
+
+[node name="HBoxContainer" type="VBoxContainer" parent="CanvasLayer" unique_id=1015080830]
+offset_right = 278.0
+offset_bottom = 66.0
+
+[node name="Button" type="Button" parent="CanvasLayer/HBoxContainer" unique_id=1281176753]
+layout_mode = 2
+text = "Radius Upgrade"
+
+[node name="Button2" type="Button" parent="CanvasLayer/HBoxContainer" unique_id=1084957226]
+layout_mode = 2
+text = "Damage upgrade"
+
+[node name="Button3" type="Button" parent="CanvasLayer/HBoxContainer" unique_id=786231211]
+layout_mode = 2
+text = "Damage multishot
+"
+
+[node name="Turret" parent="." unique_id=745407530 instance=ExtResource("2_x03ek")]
+position = Vector2(610, 324)
