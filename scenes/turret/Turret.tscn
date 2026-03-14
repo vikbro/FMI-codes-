@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://c2tbkvy45svui"]
 
 [ext_resource type="Script" uid="uid://cr60n56pfki4s" path="res://scripts/turrets/turret.gd" id="1_1l6vw"]
-[ext_resource type="Texture2D" uid="uid://dsn11jgf1phpx" path="res://sprites/icon.svg" id="2_iduhk"]
+
+[ext_resource type="Texture2D" uid="uid://c3oosxpkdlkdr" path="res://sprites/icon.svg" id="2_iduhk"]
 [ext_resource type="Resource" uid="uid://wvvu136hdxhl" path="res://data/default_turret.tres" id="2_p64hc"]
 [ext_resource type="Script" uid="uid://dg0juust2ync2" path="res://scripts/components/detection_component.gd" id="2_xmtae"]
 [ext_resource type="Script" uid="uid://bluj55vawy5hu" path="res://scripts/components/health_component.gd" id="3_iduhk"]
@@ -9,6 +10,7 @@
 [ext_resource type="Script" uid="uid://4plc0lay42xk" path="res://scripts/components/shoot_component.gd" id="4_v4lwv"]
 [ext_resource type="PackedScene" uid="uid://byssa0lwbb3ts" path="res://scenes/bullet/Bullet.tscn" id="8_t4bc6"]
 [ext_resource type="Script" uid="uid://xvocnikxrcq" path="res://scripts/components/resource_generator_component.gd" id="10_31x2x"]
+
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_v4lwv"]
 radius = 40.0

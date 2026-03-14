@@ -101,5 +101,3 @@ planet_scale = 0.225
 [node name="Planet2" parent="." unique_id=1660849869 instance=ExtResource("8_cvmbd")]
 position = Vector2(504, 437)
 planet_scale = 0.225
-
-[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=2048060132]

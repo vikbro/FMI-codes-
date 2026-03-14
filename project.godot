@@ -38,7 +38,7 @@ folder_colors={
 "res://sprites/": "green"
 }
 Event="*uid://dkmiy275bnsxe"
-"<<<<<<<HEAD[layer_names]2d_physics/layer_1"="planet"
+"[layer_names]2d_physics/layer_1"="planet"
 2d_physics/layer_2="satelite"
 2d_physics/layer_3="bullet"
 2d_physics/layer_4="enemy"
