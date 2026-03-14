@@ -96,9 +96,9 @@ position = Vector2(283, 182)
 planet_scale = 0.5
 
 [node name="Planet2" parent="." unique_id=1759797064 instance=ExtResource("8_cvmbd")]
-position = Vector2(561, 310)
-scale = Vector2(0.74, 0.74)
-planet_scale = 0.5
+position = Vector2(515, 319)
+gravity_radius = 100.0
+planet_scale = 0.2
 
 [node name="SatteliteOrbit" parent="." unique_id=295821271 instance=ExtResource("9_ft6cd")]
 orbit_radius = 100.0
