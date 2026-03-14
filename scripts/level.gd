@@ -21,21 +21,19 @@ func _ready() -> void:
 	moon = Moon.instantiate()
 	add_child(moon)
 	all_childs.append(moon)
-	sun.set_global_position(Vector2(100, 100))
-	earth.set_global_position(Vector2(1500, 100))
-	moon.set_global_position(Vector2(1600, 100))
+	sun.set_global_position(Vector2(0, 100))
+	earth.set_global_position(Vector2(0, 1500))
+	moon.set_global_position(Vector2(0, 1800))
+#	earth.apply_impulse(Vector2(500, 0))
+#	moon.apply_impulse(Vector2(1000, 0))
 
 func _process(delta: float) -> void:
 	change_cam_pos()
-	for current in all_childs:
-		for new_body in all_childs:
-			if(new_body != current):
-				new_body.velocity_change(current, delta)
-	
-	#for body in all_childs:
-		#body.position_change(delta)
-	
-#func _physics_process(delta: float) -> void:
+	earth.velocity_change(sun, delta)
+	earth.position_change(delta)
+
+func _physics_process(delta: float) -> void:
+	pass
 
 func change_cam_pos():
 	cam.position = lerp(cam.position, earth.position, 0.5)
