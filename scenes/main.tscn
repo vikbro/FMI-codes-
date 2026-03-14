@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bsrc3pns3fdgh"]
+[gd_scene format=3 uid="uid://bmj81b2r3ix7x"]
 
 [ext_resource type="Shader" uid="uid://c17dgnslw5167" path="res://scripts/shader/scroll.gdshader" id="1_q8u5g"]
 [ext_resource type="Texture2D" uid="uid://c7jmjurnk7dmw" path="res://sprites/JustStars.png" id="2_lhr70"]
@@ -9,11 +9,36 @@
 [ext_resource type="Texture2D" uid="uid://b006jv4o26l73" path="res://sprites/ui/UiText.png" id="7_3p2gp"]
 [ext_resource type="PackedScene" uid="uid://cly8u8om5uh2u" path="res://scenes/planets/Planet.tscn" id="8_cvmbd"]
 [ext_resource type="PackedScene" uid="uid://bdqll456gsmki" path="res://scenes/sattelites/Sattelite.tscn" id="9_ft6cd"]
+[ext_resource type="PackedScene" uid="uid://7p1c7ndgvy6g" path="res://enemy.tscn" id="10_choun"]
+[ext_resource type="Script" uid="uid://dlrucoharmrnc" path="res://scenes/path_follow_2d.gd" id="10_ya4ey"]
+[ext_resource type="Script" uid="uid://drlfsgh1axbge" path="res://scripts/resources/enemy_stats.gd" id="11_eb6dy"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jyhfs"]
 shader = ExtResource("1_q8u5g")
 
-[node name="Main" type="Node2D" unique_id=1022631029]
+[sub_resource type="Curve2D" id="Curve2D_85g3d"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1109, -322, 181.56201, -2.3579483, -181.56201, 2.3579483, 801, -192, -117.897415, -228.72098, 117.897415, 228.72098, 638, 13, 261.73227, -75.454346, -261.73227, 75.454346, 2, -27, 766.3332, 99.03383, -766.3332, -99.03383, 261, 761, 0, 0, 0, 0, -211, 1227)
+}
+point_count = 6
+
+[sub_resource type="Resource" id="Resource_trceg"]
+script = ExtResource("11_eb6dy")
+metadata/_custom_type_script = "uid://drlfsgh1axbge"
+
+[sub_resource type="Curve2D" id="Curve2D_choun"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1654, 1213, 453.90503, 90.781006, -453.90503, -90.781006, 1207, 992, 695.12317, -62.249832, -695.12317, 62.249832, 1324, 336, 0, 0, 0, 0, 1654, 59)
+}
+point_count = 4
+
+[sub_resource type="Curve2D" id="Curve2D_ya4ey"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -388, 653, 31.124912, 342.37408, -31.124912, -342.37408, -84, 951, -287.9055, 168.5933, 287.9055, -168.5933, 12, 269, 0, 0, 0, 0, 582, -307)
+}
+point_count = 4
+
+[node name="Node2D" type="Node2D" unique_id=1022631029]
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=868577212]
 texture_repeat = 2
@@ -96,8 +121,46 @@ orbit_radius = 100.0
 
 [node name="Planet" parent="." unique_id=276595807 instance=ExtResource("8_cvmbd")]
 position = Vector2(242, 180)
+gravity_radius = 500.0
 planet_scale = 0.225
 
 [node name="Planet2" parent="." unique_id=1660849869 instance=ExtResource("8_cvmbd")]
 position = Vector2(504, 437)
 planet_scale = 0.225
+
+[node name="Path2D" type="Path2D" parent="." unique_id=998715579]
+position = Vector2(545, 5)
+curve = SubResource("Curve2D_85g3d")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=542471378]
+position = Vector2(1109, -322)
+rotation = 2.3514555
+script = ExtResource("10_ya4ey")
+stats = SubResource("Resource_trceg")
+
+[node name="Node2D" parent="Path2D/PathFollow2D" unique_id=1341819 instance=ExtResource("10_choun")]
+
+[node name="Path2D2" type="Path2D" parent="." unique_id=1618764192]
+curve = SubResource("Curve2D_choun")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D2" unique_id=1671092373]
+position = Vector2(1654, 1213)
+rotation = -1.5178196
+script = ExtResource("10_ya4ey")
+stats = SubResource("Resource_trceg")
+
+[node name="Node2D" parent="Path2D2/PathFollow2D" unique_id=182188182 instance=ExtResource("10_choun")]
+
+[node name="Path2D3" type="Path2D" parent="." unique_id=374182952]
+curve = SubResource("Curve2D_ya4ey")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D3" unique_id=1889536205]
+position = Vector2(-388, 653)
+rotation = 1.0886619
+script = ExtResource("10_ya4ey")
+stats = SubResource("Resource_trceg")
+
+[node name="Node2D" parent="Path2D3/PathFollow2D" unique_id=1753993898 instance=ExtResource("10_choun")]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1228366303]
+zoom = Vector2(0.25, 0.25)

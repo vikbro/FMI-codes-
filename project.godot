@@ -24,9 +24,8 @@ buses/default_bus_layout="uid://efl4tnrxe8fl"
 
 [autoload]
 
-Signals="*uid://bjs3tltsgdhmn"
-
 Event="*uid://dkmiy275bnsxe"
+Signals="*uid://bjs3tltsgdhmn"
 
 [file_customization]
 
@@ -44,16 +43,6 @@ folder_colors={
 2d_physics/layer_2="satelite"
 2d_physics/layer_3="bullet"
 2d_physics/layer_4="enemy"
-
-[file_customization]
-
-folder_colors={
-"res://audio/": "red",
-"res://data/": "orange",
-"res://scenes/": "purple",
-"res://scripts/": "yellow",
-"res://sprites/": "green"
-}
 
 [physics]
 
