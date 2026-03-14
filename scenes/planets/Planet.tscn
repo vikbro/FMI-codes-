@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://driibcm7hw271" path="res://scripts/test/planet.gd" id="1_pbqvt"]
 [ext_resource type="Script" uid="uid://h5dcr4rkautv" path="res://scripts/components/resource_component.gd" id="3_0s5if"]
-[ext_resource type="Texture2D" uid="uid://liifm007gxcm" path="res://sprites/spritesheetEarth.png" id="3_8lqpq"]
+[ext_resource type="Texture2D" uid="uid://liifm007gxcm" path="res://sprites/planets/spritesheetEarth.png" id="3_8lqpq"]
 [ext_resource type="Resource" uid="uid://xvdsup6ocojt" path="res://data/default_resource_stats.tres" id="3_io4qm"]
 [ext_resource type="Script" uid="uid://xvocnikxrcq" path="res://scripts/components/resource_generator_component.gd" id="4_io4qm"]
 [ext_resource type="Script" uid="uid://bmrkph4yjbju2" path="res://scripts/resource_ui.gd" id="5_0s5if"]

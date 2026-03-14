@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbge3v0iqfgve"
-path="res://.godot/imported/Ui1.png-4836682265addb503b3330970c182671.ctex"
+uid="uid://cwoaqolxapti5"
+path="res://.godot/imported/Magnifier.png-98f62c9f3a488a47c31fafc0499558d6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Ui1.png"
-dest_files=["res://.godot/imported/Ui1.png-4836682265addb503b3330970c182671.ctex"]
+source_file="res://sprites/icons/Magnifier.png"
+dest_files=["res://.godot/imported/Magnifier.png-98f62c9f3a488a47c31fafc0499558d6.ctex"]
 
 [params]
 

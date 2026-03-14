@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctsxenxemp6p2"
-path="res://.godot/imported/UiText.png-d47806c7648ef0f9de7fbdafef0c75ad.ctex"
+uid="uid://ye706frajfwa"
+path="res://.godot/imported/Prototype3.png-a0f79ea30619013e1113e3afe7da3684.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/UiText.png"
-dest_files=["res://.godot/imported/UiText.png-d47806c7648ef0f9de7fbdafef0c75ad.ctex"]
+source_file="res://sprites/planets/Prototype3.png"
+dest_files=["res://.godot/imported/Prototype3.png-a0f79ea30619013e1113e3afe7da3684.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvhryjifsi7c2"
-path="res://.godot/imported/New_sun.png-c41f69d73e31c3d562403135e84f9a25.ctex"
+uid="uid://liifm007gxcm"
+path="res://.godot/imported/spritesheetEarth.png-9d23dc4867fbf0bfd5977cb34bb86116.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/New_sun.png"
-dest_files=["res://.godot/imported/New_sun.png-c41f69d73e31c3d562403135e84f9a25.ctex"]
+source_file="res://sprites/planets/spritesheetEarth.png"
+dest_files=["res://.godot/imported/spritesheetEarth.png-9d23dc4867fbf0bfd5977cb34bb86116.ctex"]
 
 [params]
 

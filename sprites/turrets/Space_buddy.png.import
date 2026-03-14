@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hr4botheoxm8"
-path="res://.godot/imported/Ui4.png-9fa9d6612f8eeb6dbb898bf3a72f384a.ctex"
+uid="uid://bc1jec6jdj1j2"
+path="res://.godot/imported/Space_buddy.png-74a454219901ee546a99cc653937010a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Ui4.png"
-dest_files=["res://.godot/imported/Ui4.png-9fa9d6612f8eeb6dbb898bf3a72f384a.ctex"]
+source_file="res://sprites/turrets/Space_buddy.png"
+dest_files=["res://.godot/imported/Space_buddy.png-74a454219901ee546a99cc653937010a.ctex"]
 
 [params]
 

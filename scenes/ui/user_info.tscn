@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bpqc2ov6u4b0y" path="res://sprites/UiTextNew.png" id="1_yw532"]
 [ext_resource type="FontFile" uid="uid://dasc61xev86m4" path="res://sprites/DS-DIGI.TTF" id="2_bkxlf"]
-[ext_resource type="Texture2D" uid="uid://cwoaqolxapti5" path="res://sprites/Magnifier.png" id="3_bna67"]
+[ext_resource type="Texture2D" uid="uid://cwoaqolxapti5" path="res://sprites/icons/Magnifier.png" id="3_bna67"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pvibf"]
 texture = ExtResource("1_yw532")
