@@ -40,6 +40,7 @@ func _update_shape() -> void:
 	var shape_node = get_node_or_null("Area2D/CollisionShape2D")
 	if shape_node == null:
 		return
+
 	var new_shape = CircleShape2D.new()
 	new_shape.radius = gravity_radius
 	shape_node.shape = new_shape
