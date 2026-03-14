@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://c7de0rjde074n"]
+[gd_scene format=3 uid="uid://soy3puiqpes4"]
 
 [ext_resource type="Shader" uid="uid://c17dgnslw5167" path="res://scripts/shader/scroll.gdshader" id="1_q8u5g"]
 [ext_resource type="Texture2D" uid="uid://c7jmjurnk7dmw" path="res://sprites/JustStars.png" id="2_lhr70"]
@@ -91,6 +91,7 @@ patch_margin_top = 150
 patch_margin_right = 150
 patch_margin_bottom = 300
 
+<<<<<<< HEAD
 [node name="Planet" parent="." unique_id=276595807 instance=ExtResource("8_cvmbd")]
 position = Vector2(283, 182)
 planet_scale = 0.5
@@ -102,3 +103,15 @@ planet_scale = 0.2
 
 [node name="SatteliteOrbit" parent="." unique_id=295821271 instance=ExtResource("9_ft6cd")]
 orbit_radius = 100.0
+=======
+[node name="SatteliteOrbit" parent="." unique_id=295821271 instance=ExtResource("9_ft6cd")]
+orbit_radius = 100.0
+
+[node name="Planet" parent="." unique_id=276595807 instance=ExtResource("8_cvmbd")]
+position = Vector2(242, 180)
+planet_scale = 0.225
+
+[node name="Planet2" parent="." unique_id=1660849869 instance=ExtResource("8_cvmbd")]
+position = Vector2(504, 437)
+planet_scale = 0.225
+>>>>>>> viki
