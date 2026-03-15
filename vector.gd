@@ -19,7 +19,7 @@ func _ready() -> void:
 
 func _on_angle_submitted(text: String) -> void:
 	var theta = -text.to_float()
-	if theta >= 0 or theta <= -180:
+	if theta >= -15 or theta <= -165:
 		push_warning("Vector: angle must be between -180 and 0 exclusive.")
 		return
 
@@ -32,9 +32,9 @@ func _on_angle_submitted(text: String) -> void:
 	vy = (direction.y + R * cos(deg_to_rad(90 - L)) * cos(deg_to_rad(L - theta)))
 	vector = Vector2(x, y)
 	orbit_vector = Vector2(vx, vy)
-	queue_redraw()
+	#queue_redraw()
 
-	spawn_satelite_data.emit(y / 20.0, vx / 10.0)
+	spawn_satelite_data.emit(abs(y/4), vx / 1000 )
 
 	# Hide input after confirming.
 	$Label.visible = false

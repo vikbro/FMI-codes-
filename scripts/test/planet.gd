@@ -20,6 +20,7 @@ class_name Planet
 @export var resource_generator_component: ResourceGeneratorComponent
 @export var progress_bars: PlanetProgressBars
 @export var satelite: PackedScene
+@onready var plant_sprite: Sprite2D = $PlantSprite
 
 func _ready() -> void:
 	if Engine.is_editor_hint():
@@ -34,6 +35,7 @@ func _ready() -> void:
 		progress_bars.setup(resource_generator_component)
 
 	var vector_node := get_node_or_null("Node2D")
+	vector_node.r = plant_sprite.texture.get_height() / 2
 	if vector_node and vector_node.has_signal("spawn_satelite_data"):
 		vector_node.spawn_satelite_data.connect(_on_spawn_satelite_data)
 	else:

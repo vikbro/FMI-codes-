@@ -67,7 +67,7 @@ collision_mask = 8
 shape = SubResource("CircleShape2D_io4qm")
 
 [node name="PlantSprite" type="Sprite2D" parent="." unique_id=180411245]
-scale = Vector2(0.29, 0.29)
+scale = Vector2(0.26, 0.26)
 texture = ExtResource("3_8lqpq")
 hframes = 3
 vframes = 2
