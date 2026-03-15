@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://148ovvtp1on2"]
 
-[ext_resource type="Texture2D" uid="uid://c3oosxpkdlkdr" path="res://sprites/icon.svg" id="1_530pw"]
-[ext_resource type="Script" uid="uid://db4pitcaftv67" path="res://scenes/Moon.gd" id="1_q6it2"]
+[ext_resource type="Texture2D" uid="uid://dsn11jgf1phpx" path="res://sprites/icon.svg" id="1_530pw"]
+[ext_resource type="Script" path="res://scenes/Moon.gd" id="1_q6it2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5kn0a"]
 

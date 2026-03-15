@@ -12,23 +12,28 @@ func _input(event):
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			var direction = (get_global_mouse_position() - turret.global_position).normalized()
 			turret.shoot_component._fire_in_direction(direction)
+			Global_Audio.shoot.play()
 
 func _on_radius_upgrade():
+	Global_Audio.resource.play()
 	var upgrade = RadiusUpgrade.new()
 	upgrade.bonus = 100.0
 	turret.add_child(upgrade)
 	print("Radius is now: ", turret.stats.detection_radius)
 
 func _on_damage_upgrade():
+	Global_Audio.resource.play()
 	var upgrade = DamageUpgrade.new()
 	turret.add_child(upgrade)
 	print("Damage is now: ", turret.bullet_stats.damage)
 
 func _on_multishot_upgrade():
+	Global_Audio.resource.play()
 	var upgrade = TripleShotUpgrade.new()
 	turret.add_child(upgrade)
 	print("Bullet count is now: ", turret.bullet_stats.bullet_count)
 
 func _on_button_4_pressed() -> void:
+	Global_Audio.swoosh.play()
 	UpgradeManager.offer_upgrades()
 	pass # Replace with function body.

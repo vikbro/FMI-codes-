@@ -1,8 +1,8 @@
-[gd_scene format=3 uid="uid://dllrjvvf4y1va"]
+[gd_scene format=3 uid="uid://ct21lcsw1rs2j"]
 
 [ext_resource type="Script" uid="uid://sh6txxxqkxx7" path="res://scenes/ui/upgrade_selection_menu.gd" id="1_cv2ys"]
 [ext_resource type="FontFile" uid="uid://dasc61xev86m4" path="res://sprites/DS-DIGI.TTF" id="1_pedha"]
-[ext_resource type="PackedScene" uid="uid://chbqjdoda5sq4" path="res://scenes/ui/Upgrade.tscn" id="2_lj64f"]
+[ext_resource type="PackedScene" path="res://scenes/ui/Upgrade.tscn" id="2_lj64f"]
 
 [node name="UpgradeSelectionMenu" type="Control" unique_id=1156196769]
 layout_mode = 3

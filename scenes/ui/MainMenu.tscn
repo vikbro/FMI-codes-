@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://wa0no123flne"]
+[gd_scene format=3 uid="uid://bu7m7tjsrqw8c"]
+
+[ext_resource type="PackedScene" uid="uid://c7twpgtb4ud18" path="res://moving camera.tscn" id="2_6jbdy"]
 
 [node name="MainMenu" type="Control" unique_id=666836823]
 layout_mode = 3
@@ -7,3 +9,17 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Label" type="Label" parent="." unique_id=430664472]
+layout_mode = 0
+offset_right = 529.0
+offset_bottom = 215.0
+text = "buh
+"
+
+[node name="Button" type="Button" parent="." unique_id=1406060063]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="CharacterBody2D" parent="." unique_id=171581521 instance=ExtResource("2_6jbdy")]

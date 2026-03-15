@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://c7twpgtb4ud18"]
+
+[ext_resource type="Script" uid="uid://e0idq32ck0rt" path="res://character_body_2d.gd" id="1_8ovt7"]
+[ext_resource type="Texture2D" uid="uid://cm23sl264fe7k" path="res://sprites/icons/Settings.png" id="2_oyiqa"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=171581521]
+script = ExtResource("1_8ovt7")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1020906917]
+zoom = Vector2(0.75, 0.75)
+position_smoothing_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=70393326]
+visible = false
+scale = Vector2(0.31316727, 0.2930403)
+texture = ExtResource("2_oyiqa")

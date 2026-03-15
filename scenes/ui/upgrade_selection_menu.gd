@@ -34,6 +34,7 @@ func _populate(options: Array[PackedScene]) -> void:
 		ui.upgrade_selected.connect(_on_upgrade_ui_selected)
 
 func _on_upgrade_ui_selected(ui: UpgradeUI) -> void:
+	Global_Audio.click.play()
 	selected_upgrade_ui = ui
 	upgrade_description.text = ui.description
 	select_btn.disabled = false
@@ -41,5 +42,6 @@ func _on_upgrade_ui_selected(ui: UpgradeUI) -> void:
 func _on_select_btn_pressed() -> void:
 	if selected_upgrade_ui == null:
 		return
+	Global_Audio.click.play()
 	UpgradeManager.choose_upgrade(selected_upgrade_ui.upgrade_scene)
 	visible = false

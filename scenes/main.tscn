@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://bmj81b2r3ix7x"]
+[gd_scene format=3 uid="uid://btmt7x137me53"]
 
-[ext_resource type="Shader" uid="uid://c17dgnslw5167" path="res://scripts/shader/scroll.gdshader" id="1_q8u5g"]
+[ext_resource type="Shader" path="res://scripts/shader/scroll.gdshader" id="1_q8u5g"]
 [ext_resource type="Texture2D" uid="uid://4u1a6ybittr6" path="res://sprites/JustStars.png" id="2_lhr70"]
 [ext_resource type="Texture2D" uid="uid://jpcswbhyxo2n" path="res://sprites/ui/RadarL1 1.png" id="3_wp0k4"]
 [ext_resource type="Texture2D" uid="uid://km6qo2s07kun" path="res://sprites/ui/RadarL1.png" id="4_bjd11"]
@@ -151,6 +151,7 @@ orbit_radius = 100.0
 
 [node name="Planet" parent="." unique_id=276595807 instance=ExtResource("8_cvmbd")]
 position = Vector2(242, 180)
+planet_texture = ExtResource("10_a8y0u")
 gravity_radius = 500.0
 planet_texture = ExtResource("10_a8y0u")
 planet_scale = 0.225
@@ -170,6 +171,7 @@ stats = SubResource("Resource_jkv2x")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1228366303]
 zoom = Vector2(0.25, 0.25)
+script = ExtResource("15_jkv2x")
 
 [node name="Path2D2" type="Path2D" parent="." unique_id=482871658]
 visible = false

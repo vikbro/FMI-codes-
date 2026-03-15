@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bex1n6df2u1ww" path="res://sprites/ui/FinalUIText.png" id="1_bkxlf"]
 [ext_resource type="FontFile" uid="uid://dasc61xev86m4" path="res://sprites/DS-DIGI.TTF" id="2_bkxlf"]
-[ext_resource type="Script" uid="uid://bl5n6rdoovurp" path="res://scripts/ui/research_ui.gd" id="2_bna67"]
+[ext_resource type="Script" path="res://scripts/ui/research_ui.gd" id="2_bna67"]
 [ext_resource type="Texture2D" uid="uid://cwoaqolxapti5" path="res://sprites/icons/Magnifier.png" id="3_bna67"]
 [ext_resource type="Texture2D" uid="uid://cuwgqeg1whu2d" path="res://sprites/ui/Ui1.png" id="4_bna67"]
 [ext_resource type="PackedScene" path="res://scenes/ui/UpgradeSelectionMenu.tscn" id="6_pvibf"]
