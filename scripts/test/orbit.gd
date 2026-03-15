@@ -14,17 +14,17 @@ func generate_orbit(center: Vector2, radius: float) -> void:
 	orbit_radius = radius
 	global_position = Vector2.ZERO  # path lives in world space
 	curve = Curve2D.new()
-	
+
 	var c := radius * BEZIER_C
 	var num_points := 4
-	
+
 	for i in num_points:
 		var angle := (TAU / num_points) * i
 		var point := center + Vector2(cos(angle) * radius, sin(angle) * radius)
 		var tangent := Vector2(-sin(angle) * c, cos(angle) * c)
 		curve.add_point(point, -tangent, tangent)
-	
-	# Close the loop
-	var close_point := center + Vector2(orbit_radius, 0)
-	var close_tangent := Vector2(0, c)
+
+	var close_angle := 0.0  # same as i=0
+	var close_point := center + Vector2(cos(close_angle) * radius, sin(close_angle) * radius)
+	var close_tangent := Vector2(-sin(close_angle) * c, cos(close_angle) * c)
 	curve.add_point(close_point, -close_tangent, close_tangent)

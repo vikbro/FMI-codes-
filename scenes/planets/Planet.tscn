@@ -5,10 +5,10 @@
 [ext_resource type="Texture2D" uid="uid://liifm007gxcm" path="res://sprites/planets/spritesheetEarth.png" id="3_8lqpq"]
 [ext_resource type="Resource" uid="uid://xvdsup6ocojt" path="res://data/default_resource_stats.tres" id="3_io4qm"]
 [ext_resource type="Script" uid="uid://xvocnikxrcq" path="res://scripts/components/resource_generator_component.gd" id="4_io4qm"]
-[ext_resource type="Script" uid="uid://bmrkph4yjbju2" path="res://scripts/resource_ui.gd" id="5_0s5if"]
+[ext_resource type="Script" path="res://scripts/resource_ui.gd" id="5_0s5if"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_io4qm"]
-radius = 200.0
+radius = 486.2016
 
 [sub_resource type="Animation" id="Animation_iwbf0"]
 length = 0.001
@@ -51,6 +51,7 @@ _data = {
 
 [node name="Planet" type="Node2D" unique_id=276595807 node_paths=PackedStringArray("resource_generator_component", "progress_bars")]
 script = ExtResource("1_pbqvt")
+gravity_radius = 100.0
 planet_texture = ExtResource("3_8lqpq")
 resource_generator_component = NodePath("ResourceGeneratorComponent")
 progress_bars = NodePath("ProgressBars")
@@ -62,6 +63,7 @@ collision_mask = 8
 shape = SubResource("CircleShape2D_io4qm")
 
 [node name="PlantSprite" type="Sprite2D" parent="." unique_id=180411245]
+scale = Vector2(0.29, 0.29)
 texture = ExtResource("3_8lqpq")
 hframes = 3
 vframes = 2
@@ -81,10 +83,11 @@ stats = ExtResource("3_io4qm")
 layout_mode = 3
 anchors_preset = 0
 offset_left = -2.0
-offset_top = 256.0
+offset_top = 148.0
 offset_right = 38.0
-offset_bottom = 296.0
+offset_bottom = 188.0
 script = ExtResource("5_0s5if")
+metadata/_edit_use_anchors_ = true
 
 [node name="StorageCapacity" type="ProgressBar" parent="ProgressBars" unique_id=1219737688]
 visible = false

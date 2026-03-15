@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://l8wlr58topo2"]
+
+[ext_resource type="PackedScene" uid="uid://cly8u8om5uh2u" path="res://scenes/planets/Planet.tscn" id="1_4tq74"]
+[ext_resource type="PackedScene" uid="uid://bdqll456gsmki" path="res://scenes/sattelites/Sattelite.tscn" id="2_hpm3g"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hpm3g"]
+radius = 94.14512
+
+[sub_resource type="Curve2D" id="Curve2D_hpm3g"]
+_data = {
+"points": PackedVector2Array(0, -165.68541, 0, 165.68541, 547, 209, 165.68541, -1.014497e-14, -165.68541, 1.014497e-14, 247, 509, 2.028994e-14, 165.68541, -2.028994e-14, -165.68541, -53, 209, -165.68541, 3.043491e-14, 165.68541, -3.043491e-14, 247, -91, 0, -165.68541, 0, 165.68541, 547, 209)
+}
+point_count = 5
+
+[node name="OrbitTest" type="Node2D" unique_id=336362239]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2143502426 groups=["enemies"]]
+position = Vector2(567, 68)
+collision_layer = 8
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=713672764]
+shape = SubResource("CircleShape2D_hpm3g")
+
+[node name="Planet" parent="." unique_id=276595807 instance=ExtResource("1_4tq74")]
+position = Vector2(247, 209)
+
+[node name="SatteliteOrbit" parent="." unique_id=295821271 node_paths=PackedStringArray("current_planet") instance=ExtResource("2_hpm3g")]
+curve = SubResource("Curve2D_hpm3g")
+current_planet = NodePath("../Planet")
+
+[node name="Planet2" parent="." unique_id=1252246480 instance=ExtResource("1_4tq74")]
+position = Vector2(896, 594)

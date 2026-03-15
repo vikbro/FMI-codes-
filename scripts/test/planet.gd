@@ -21,9 +21,6 @@ class_name Planet
 @export var progress_bars: PlanetProgressBars
 
 func _ready() -> void:
-	_update_shape()
-	_update_sprite()
-	_update_scale()
 
 	if Engine.is_editor_hint():
 		return
@@ -40,9 +37,9 @@ func _update_shape() -> void:
 	var shape_node = get_node_or_null("Area2D/CollisionShape2D")
 	if shape_node == null:
 		return
-	var new_shape = CircleShape2D.new()
-	new_shape.radius = gravity_radius
-	shape_node.shape = new_shape
+	if not shape_node.shape is CircleShape2D:
+		shape_node.shape = CircleShape2D.new()
+	shape_node.shape.radius = gravity_radius
 
 func _update_sprite() -> void:
 	var sprite = get_node_or_null("PlantSprite")
