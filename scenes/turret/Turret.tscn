@@ -7,7 +7,7 @@
 [ext_resource type="Resource" uid="uid://b376u7k3hncms" path="res://data/default_bullet.tres" id="3_rnh5d"]
 [ext_resource type="Texture2D" uid="uid://ek0ingje452x" path="res://sprites/blue/Space_buddy(1).png" id="4_rnh5d"]
 [ext_resource type="Script" uid="uid://4plc0lay42xk" path="res://scripts/components/shoot_component.gd" id="4_v4lwv"]
-[ext_resource type="PackedScene" path="res://scenes/bullet/Bullet.tscn" id="8_t4bc6"]
+[ext_resource type="PackedScene" uid="uid://h70hiyxjfypl" path="res://scenes/bullet/bullet.tscn" id="8_t4bc6"]
 [ext_resource type="Script" uid="uid://xvocnikxrcq" path="res://scripts/components/resource_generator_component.gd" id="10_31x2x"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_v4lwv"]
@@ -27,7 +27,7 @@ texture = ExtResource("4_rnh5d")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=604293616]
 collision_layer = 2
-collision_mask = 15
+collision_mask = 14
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=982405566]
 shape = SubResource("CircleShape2D_v4lwv")

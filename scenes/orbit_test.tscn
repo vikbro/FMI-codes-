@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://l8wlr58topo2"]
+
+[ext_resource type="PackedScene" uid="uid://cly8u8om5uh2u" path="res://scenes/planets/Planet.tscn" id="1_4tq74"]
+[ext_resource type="Script" uid="uid://b0y67w4vxto2q" path="res://scripts/enemy_spawner.gd" id="3_2b4x4"]
+[ext_resource type="PackedScene" uid="uid://7p1c7ndgvy6g" path="res://enemy.tscn" id="4_j45hg"]
+
+[node name="OrbitTest" type="Node2D" unique_id=336362239]
+
+[node name="Planet" parent="." unique_id=276595807 instance=ExtResource("1_4tq74")]
+position = Vector2(247, 209)
+
+[node name="Planet2" parent="." unique_id=1252246480 instance=ExtResource("1_4tq74")]
+position = Vector2(896, 594)
+
+[node name="Node" type="Node2D" parent="." unique_id=1368873393]
+position = Vector2(1071, 48)
+script = ExtResource("3_2b4x4")
+enemy_scene = ExtResource("4_j45hg")
+spawn_interval = 2.0

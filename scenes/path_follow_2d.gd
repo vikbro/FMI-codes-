@@ -47,7 +47,7 @@ func spawn_enemies(num: int):
 		#offset = rng.randf_range(-15, 15)
 		#offset_arr.append(offset)
 		en_array.append(enemy)
-		await get_tree().create_timer(abs(offset)).timeout
+		#await get_tree().create_timer(abs(offset)).timeout
 
 func _checker(check: bool, area: Area2D):
 	#my_rng = rng.randf_range(0, 10)

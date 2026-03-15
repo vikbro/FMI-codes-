@@ -4,4 +4,5 @@
 
 [resource]
 script = ExtResource("1_lys5k")
+fire_rate = 13.0
 metadata/_custom_type_script = "uid://ddh1s0s7obys5"

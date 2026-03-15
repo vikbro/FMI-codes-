@@ -91,3 +91,7 @@ expand_icon = true
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=573893481]
 
 [node name="UpgradeSelectionMenu" parent="." unique_id=1156196769 instance=ExtResource("6_pvibf")]
+offset_left = 46.0
+offset_top = 165.0
+offset_right = -517.0
+offset_bottom = -69.0

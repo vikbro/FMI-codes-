@@ -19,7 +19,6 @@ func _ready() -> void:
 
 func _process(_delta: float) -> void:
 	var target: Node2D = shoot_component.target
-	Global_Audio.shoot.play()
 	if not is_instance_valid(target):
 		shoot_component.target = null
 		return

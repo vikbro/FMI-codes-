@@ -1,34 +1,36 @@
 extends Node2D
+class_name Enemy
 
 @export var stats: EnemyStats
-@onready var area_enemy: Area2D = $Area2D
-#@onready var path_follow_2d: PathFollow2D = $".."
-var track: bool = false
-var area_signal: Area2D
-@onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 
+var _target_planet: Node2D = null
 
 func _ready() -> void:
-	pass
+	_update_collision_shape()
+
+func init(target_planet: Node2D) -> void:
+	_target_planet = target_planet
+
+func _update_collision_shape() -> void:
+	var shape_node = get_node_or_null("Area2D/CollisionShape2D")
+	if shape_node == null:
+		return
+	if not shape_node.shape is CircleShape2D:
+		shape_node.shape = CircleShape2D.new()
+	shape_node.shape.radius = stats.radius
 
 func _process(delta: float) -> void:
-	pass
-
-func take_damage(dmg: int):
-	stats.health = stats.health - dmg
-	Global_Audio.enemy_hit.play()
-	await Global_Audio.swoosh.finished
-	print(12)
-
-func _on_area_2d_area_entered(area: Area2D) -> void:
-	if area.get_script() == get_script():
+	if _target_planet == null:
 		return
-	else:
-		print("hu")
-		track = true
-		area_signal = area
-		Event.detection_planet.emit(track, area)
+	var direction := (_target_planet.global_position - global_position).normalized()
+	global_position += direction * stats.speed * delta
 
+	# Flip the sprite horizontally based on which way the enemy is moving.
+	var sprite := get_node_or_null("Sprite2D") as Sprite2D
+	if sprite:
+		sprite.flip_h = direction.x < 0.0
 
-#func _passing_func():
-	#pass
+func take_damage(dmg: int) -> void:
+	stats.health -= dmg
+	if stats.health <= 0:
+		queue_free()
