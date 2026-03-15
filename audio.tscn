@@ -37,7 +37,8 @@ bus = &"Music"
 
 [node name="MenuTheme" type="AudioStreamPlayer" parent="." unique_id=181046176]
 stream = ExtResource("6_iet0q")
-bus = &"Music"
+volume_db = 24.0
+bus = &"menu"
 
 [node name="Radar" type="AudioStreamPlayer" parent="." unique_id=87248990]
 stream = ExtResource("7_v84do")

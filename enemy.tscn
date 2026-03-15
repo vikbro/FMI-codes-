@@ -1,14 +1,13 @@
 [gd_scene format=3 uid="uid://b0dc2vemuu2ry"]
 
 [ext_resource type="Script" uid="uid://bej03fm2e28ng" path="res://enemy.gd" id="1_7k104"]
-[ext_resource type="Script" uid="uid://drlfsgh1axbge" path="res://scripts/resources/enemy_stats.gd" id="2_4gyqm"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_stats.gd" id="2_4gyqm"]
 [ext_resource type="Texture2D" uid="uid://bh7oshuvpjxm2" path="res://sprites/enemy/Enemy.png" id="3_qi2p4"]
 
 [sub_resource type="Resource" id="Resource_4gyqm"]
 script = ExtResource("2_4gyqm")
 health = 20
 speed = 50.0
-metadata/_custom_type_script = "uid://drlfsgh1axbge"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7xaro"]
 radius = 84.21401

@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://6wtfo5ndfavj"]
+
+[ext_resource type="FontFile" uid="uid://dasc61xev86m4" path="res://sprites/DS-DIGI.TTF" id="1_cbtnu"]
+[ext_resource type="Script" uid="uid://npbxawoq67ox" path="res://lose_screen.gd" id="1_h3ym8"]
+
+[node name="Lose" type="Control" unique_id=956724146]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+script = ExtResource("1_h3ym8")
+
+[node name="Label" type="Label" parent="." unique_id=2592416]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -264.5
+offset_right = 264.5
+offset_bottom = 215.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_cbtnu")
+theme_override_font_sizes/font_size = 100
+text = "YOU LOSE!"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="return" type="Button" parent="Label" unique_id=196170918]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 188.5
+offset_top = 397.0
+offset_right = -202.5
+offset_bottom = 266.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_cbtnu")
+theme_override_font_sizes/font_size = 75
+text = "quit"
+
+[node name="QUIT" type="Button" parent="Label" unique_id=2088154643]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 142.5
+offset_top = 310.0
+offset_right = 371.5
+offset_bottom = 394.0
+theme_override_fonts/font = ExtResource("1_cbtnu")
+theme_override_font_sizes/font_size = 75
+text = "RETURN"
+
+[connection signal="pressed" from="Label/return" to="." method="_on_return_pressed"]
+[connection signal="pressed" from="Label/QUIT" to="." method="_on_quit_pressed"]

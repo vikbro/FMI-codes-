@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bu7m7tjsrqw8c"]
 
-[ext_resource type="PackedScene" uid="uid://c7twpgtb4ud18" path="res://moving camera.tscn" id="2_6jbdy"]
+[ext_resource type="Script" uid="uid://b72u0wy3ls5kp" path="res://scenes/ui/main_menu.gd" id="1_vjtqc"]
+[ext_resource type="FontFile" uid="uid://dasc61xev86m4" path="res://sprites/DS-DIGI.TTF" id="2_6jbdy"]
 
 [node name="MainMenu" type="Control" unique_id=666836823]
 layout_mode = 3
@@ -9,17 +10,69 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_vjtqc")
 
 [node name="Label" type="Label" parent="." unique_id=430664472]
-layout_mode = 0
-offset_right = 529.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -264.5
+offset_right = 264.5
 offset_bottom = 215.0
-text = "buh
-"
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_6jbdy")
+theme_override_font_sizes/font_size = 100
+text = "SAFE SPACE"
+horizontal_alignment = 1
+vertical_alignment = 2
 
-[node name="Button" type="Button" parent="." unique_id=1406060063]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+[node name="start" type="Button" parent="Label" unique_id=1406060063]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 174.0
+offset_top = 203.5
+offset_right = -195.0
+offset_bottom = 207.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_6jbdy")
+theme_override_font_sizes/font_size = 75
+text = "PLAY"
 
-[node name="CharacterBody2D" parent="." unique_id=171581521 instance=ExtResource("2_6jbdy")]
+[node name="quit" type="Button" parent="Label" unique_id=1617126455]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 174.0
+offset_top = 203.5
+offset_right = -195.0
+offset_bottom = 207.0
+theme_override_fonts/font = ExtResource("2_6jbdy")
+theme_override_font_sizes/font_size = 75
+text = "QUIT"
+
+[node name="options" type="Button" parent="Label" unique_id=358180932]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.5
+anchor_right = 1.0
+anchor_bottom = 1.65
+offset_left = 174.0
+offset_top = 203.5
+offset_right = -195.0
+offset_bottom = 207.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_6jbdy")
+theme_override_font_sizes/font_size = 75
+text = "OPT."
+
+[connection signal="pressed" from="Label/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Label/quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Label/options" to="." method="_on_options_pressed"]
