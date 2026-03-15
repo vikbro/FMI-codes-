@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bej03fm2e28ng" path="res://enemy.gd" id="1_7k104"]
 [ext_resource type="Script" uid="uid://drlfsgh1axbge" path="res://scripts/resources/enemy_stats.gd" id="2_4gyqm"]
-[ext_resource type="Texture2D" uid="uid://c3oosxpkdlkdr" path="res://sprites/icon.svg" id="3_qi2p4"]
+[ext_resource type="Texture2D" uid="uid://dsn11jgf1phpx" path="res://sprites/icon.svg" id="3_qi2p4"]
 
 [sub_resource type="Resource" id="Resource_4gyqm"]
 script = ExtResource("2_4gyqm")
@@ -11,7 +11,7 @@ metadata/_custom_type_script = "uid://drlfsgh1axbge"
 [sub_resource type="CircleShape2D" id="CircleShape2D_7xaro"]
 radius = 84.21401
 
-[node name="Node2D" type="Node2D" unique_id=1341819]
+[node name="Node2D2" type="Node2D" unique_id=1341819]
 script = ExtResource("1_7k104")
 stats = SubResource("Resource_4gyqm")
 

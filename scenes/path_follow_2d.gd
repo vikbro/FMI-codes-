@@ -23,12 +23,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	Event.detection_planet.connect(_checker)
 	for i in en_array.size():
-		if tracker == false:
-			progress += en_array[i].stats.speed * delta
-			h_offset = offset_arr[i]
-		else:
-			direction = (area_pl.global_position - en_array[i].global_position).normalized()
-			en_array[i].global_position += direction * delta * en_array[i].stats.speed
+		direction = (area_pl.global_position - en_array[i].global_position).normalized()
+		en_array[i].global_position += direction * delta * en_array[i].stats.speed
 		#my_rng = rng.randf_range(0, 1)
 		#enemy.instantiate()
 		#$"..".add_child(enemy)
@@ -46,10 +42,10 @@ func spawn_enemies(num: int):
 		my_rng = rng.randf_range(0, 1)
 		var enemy = enemy_scene.instantiate()
 		add_child(enemy)
-		progress = 0
+		progress = rng.randi_range(0, 1)
 		#progress = my_rng
-		offset = rng.randf_range(-15, 15)
-		offset_arr.append(offset)
+		#offset = rng.randf_range(-15, 15)
+		#offset_arr.append(offset)
 		en_array.append(enemy)
 		await get_tree().create_timer(abs(offset)).timeout
 
@@ -60,12 +56,8 @@ func _checker(check: bool, area: Area2D):
 	#add_child(enemy)
 	#enemy.global_position = global_position
 	#enemy.stats = EnemyStats
-	if check == true:
-		tracker = true
-		area_pl = area
+	area_pl = area
 		#queue_free()
-	else:
-		pass
 
 #
 #var enemy = preload("res://enemy.tscn")
