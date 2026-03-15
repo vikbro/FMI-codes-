@@ -26,7 +26,6 @@ buses/default_bus_layout="uid://efl4tnrxe8fl"
 
 Event="*uid://dkmiy275bnsxe"
 Signals="*uid://bjs3tltsgdhmn"
-Event="*uid://dkmiy275bnsxe"
 ResourceManager="*uid://deofd828b350i"
 UpgradeManager="*uid://bsrxohkyyr8qx"
 
@@ -48,23 +47,6 @@ Event="*uid://dkmiy275bnsxe"
 [global_group]
 
 enemies=""
-
-[layer_names]
-
-2d_physics/layer_1="planet"
-2d_physics/layer_2="satelite"
-2d_physics/layer_3="bullet"
-2d_physics/layer_4="enemy"
-
-[file_customization]
-
-folder_colors={
-"res://audio/": "red",
-"res://data/": "orange",
-"res://scenes/": "purple",
-"res://scripts/": "yellow",
-"res://sprites/": "green"
-}
 
 [layer_names]
 
