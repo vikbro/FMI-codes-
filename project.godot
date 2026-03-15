@@ -30,6 +30,10 @@ UpgradeManager="*uid://bsrxohkyyr8qx"
 Event="*uid://bhvvibrs50c6j"
 Global_Audio="*uid://qf70uj16ljop"
 
+[display]
+
+window/stretch/mode="canvas_items"
+
 [file_customization]
 
 folder_colors={
