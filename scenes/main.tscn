@@ -1,19 +1,19 @@
-[gd_scene format=3 uid="uid://bmj81b2r3ix7x"]
+[gd_scene format=3 uid="uid://btmt7x137me53"]
 
-[ext_resource type="Shader" uid="uid://c17dgnslw5167" path="res://scripts/shader/scroll.gdshader" id="1_q8u5g"]
+[ext_resource type="Shader" path="res://scripts/shader/scroll.gdshader" id="1_q8u5g"]
 [ext_resource type="Texture2D" uid="uid://4u1a6ybittr6" path="res://sprites/JustStars.png" id="2_lhr70"]
 [ext_resource type="Texture2D" uid="uid://jpcswbhyxo2n" path="res://sprites/ui/RadarL1 1.png" id="3_wp0k4"]
 [ext_resource type="Texture2D" uid="uid://km6qo2s07kun" path="res://sprites/ui/RadarL1.png" id="4_bjd11"]
 [ext_resource type="Texture2D" uid="uid://cuwgqeg1whu2d" path="res://sprites/ui/Ui1.png" id="5_qmy6f"]
 [ext_resource type="Texture2D" uid="uid://bbe3jb46eharj" path="res://sprites/ui/Ui1circle.png" id="6_mwfav"]
 [ext_resource type="Texture2D" uid="uid://b006jv4o26l73" path="res://sprites/ui/UiText.png" id="7_3p2gp"]
-[ext_resource type="PackedScene" uid="uid://cly8u8om5uh2u" path="res://scenes/planets/Planet.tscn" id="8_cvmbd"]
-[ext_resource type="PackedScene" uid="uid://bdqll456gsmki" path="res://scenes/sattelites/Sattelite.tscn" id="9_ft6cd"]
+[ext_resource type="PackedScene" path="res://scenes/planets/Planet.tscn" id="8_cvmbd"]
+[ext_resource type="PackedScene" path="res://scenes/sattelites/Sattelite.tscn" id="9_ft6cd"]
 [ext_resource type="Texture2D" uid="uid://dmqnm3p74clgl" path="res://sprites/test2.png" id="10_a8y0u"]
-[ext_resource type="PackedScene" uid="uid://7p1c7ndgvy6g" path="res://enemy.tscn" id="10_choun"]
-[ext_resource type="Script" uid="uid://cvlrrwj4x68fw" path="res://scenes/path_2d.gd" id="10_trceg"]
+[ext_resource type="PackedScene" path="res://enemy.tscn" id="10_choun"]
+[ext_resource type="Script" path="res://scenes/path_2d.gd" id="10_trceg"]
 [ext_resource type="Script" uid="uid://dlrucoharmrnc" path="res://scenes/path_follow_2d.gd" id="10_ya4ey"]
-[ext_resource type="Script" uid="uid://drlfsgh1axbge" path="res://scripts/resources/enemy_stats.gd" id="11_eb6dy"]
+[ext_resource type="Script" path="res://scripts/resources/enemy_stats.gd" id="11_eb6dy"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jyhfs"]
 shader = ExtResource("1_q8u5g")
@@ -24,7 +24,7 @@ _data = {
 }
 point_count = 6
 
-[sub_resource type="Resource" id="Resource_jkv2x"]
+[sub_resource type="Resource" id="Resource_a8y0u"]
 resource_local_to_scene = true
 script = ExtResource("11_eb6dy")
 metadata/_custom_type_script = "uid://drlfsgh1axbge"
@@ -151,8 +151,8 @@ orbit_radius = 100.0
 
 [node name="Planet" parent="." unique_id=276595807 instance=ExtResource("8_cvmbd")]
 position = Vector2(242, 180)
-gravity_radius = 500.0
 planet_texture = ExtResource("10_a8y0u")
+gravity_radius = 500.0
 planet_scale = 0.225
 
 [node name="Path2D" type="Path2D" parent="." unique_id=998715579]
@@ -166,7 +166,7 @@ rotation = 2.3514555
 script = ExtResource("10_ya4ey")
 
 [node name="Node2D" parent="Path2D/PathFollow2D" unique_id=1341819 instance=ExtResource("10_choun")]
-stats = SubResource("Resource_jkv2x")
+stats = SubResource("Resource_a8y0u")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1228366303]
 zoom = Vector2(0.25, 0.25)
