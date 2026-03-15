@@ -1,10 +1,13 @@
 [gd_scene format=3 uid="uid://c8xb7u2xqhjvc"]
 
+<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://b006jv4o26l73" path="res://sprites/ui/UiText.png" id="1_i16wg"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_85c7g"]
 texture = ExtResource("1_i16wg")
 
+=======
+>>>>>>> main
 [node name="OptionsMenu" type="Control" unique_id=302218475]
 layout_mode = 3
 anchors_preset = 15

@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="EnemyStats" format=3 uid="uid://cdyajk668yrgk"]
+
+[ext_resource type="Script" uid="uid://drlfsgh1axbge" path="res://scripts/resources/enemy_stats.gd" id="1_8qgel"]
+
+[resource]
+script = ExtResource("1_8qgel")
+speed = 50.0
