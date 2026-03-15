@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://c8xb7u2xqhjvc"]
 
-
+[ext_resource type="Script" uid="uid://07givvwlw83h" path="res://scenes/ui/audio_settings.gd" id="1_edyki"]
 [ext_resource type="Texture2D" uid="uid://b006jv4o26l73" path="res://sprites/ui/UiText.png" id="1_i16wg"]
+[ext_resource type="FontFile" uid="uid://dasc61xev86m4" path="res://sprites/DS-DIGI.TTF" id="3_wwyh1"]
+[ext_resource type="Texture2D" uid="uid://bbt2vlj2b1pp7" path="res://sprites/blue/Ui3bars.png" id="4_sfpvx"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_85c7g"]
 texture = ExtResource("1_i16wg")
@@ -15,6 +17,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=995567301]
+script = ExtResource("1_edyki")
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer" unique_id=1316090656]
 custom_minimum_size = Vector2(400, 0)
@@ -30,6 +33,7 @@ theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
 [node name="Panel" type="Panel" parent="CanvasLayer/MarginContainer" unique_id=683082693]
+visible = false
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_85c7g")
 
@@ -43,6 +47,7 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="CanvasLayer/MarginContainer/VBoxContainer/MarginContainer" unique_id=1910156826]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_wwyh1")
 theme_override_font_sizes/font_size = 32
 text = "Volume settings"
 horizontal_alignment = 1
@@ -53,6 +58,7 @@ layout_mode = 2
 [node name="Label" type="Label" parent="CanvasLayer/MarginContainer/VBoxContainer/MasterContainer" unique_id=112407798]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_wwyh1")
 theme_override_font_sizes/font_size = 32
 text = "Master"
 horizontal_alignment = 1
@@ -68,6 +74,7 @@ layout_mode = 2
 [node name="Label" type="Label" parent="CanvasLayer/MarginContainer/VBoxContainer/MusicContainer" unique_id=788295653]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_wwyh1")
 theme_override_font_sizes/font_size = 32
 text = "Music"
 horizontal_alignment = 1
@@ -83,6 +90,7 @@ layout_mode = 2
 [node name="Label" type="Label" parent="CanvasLayer/MarginContainer/VBoxContainer/SFXContainer" unique_id=1430520371]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_wwyh1")
 theme_override_font_sizes/font_size = 32
 text = "SFX"
 horizontal_alignment = 1
@@ -91,3 +99,20 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=719919659]
+offset_left = 1287.0001
+offset_top = 141.0
+offset_right = 2057.0
+offset_bottom = 950.0
+rotation = 1.5707964
+scale = Vector2(0.6, 0.89)
+texture = ExtResource("4_sfpvx")
+
+[node name="Button" type="Button" parent="CanvasLayer" unique_id=772206757]
+offset_left = 843.0
+offset_top = 461.0
+offset_right = 1046.0
+offset_bottom = 492.0
+theme_override_fonts/font = ExtResource("3_wwyh1")
+text = "CLOSE"

@@ -2,6 +2,11 @@
 
 [ext_resource type="FontFile" uid="uid://dasc61xev86m4" path="res://sprites/DS-DIGI.TTF" id="1_cbtnu"]
 [ext_resource type="Script" uid="uid://npbxawoq67ox" path="res://lose_screen.gd" id="1_h3ym8"]
+[ext_resource type="Shader" uid="uid://c17dgnslw5167" path="res://scripts/shader/scroll.gdshader" id="2_6mmkj"]
+[ext_resource type="Texture2D" uid="uid://4u1a6ybittr6" path="res://sprites/JustStars.png" id="3_ed4nj"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_14evm"]
+shader = ExtResource("2_6mmkj")
 
 [node name="Lose" type="Control" unique_id=956724146]
 layout_mode = 3
@@ -9,6 +14,16 @@ anchors_preset = 0
 offset_right = 1152.0
 offset_bottom = 648.0
 script = ExtResource("1_h3ym8")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1138143192]
+material = SubResource("ShaderMaterial_14evm")
+layout_mode = 0
+offset_left = -3262.0
+offset_top = -2321.0
+offset_right = 5269.0
+offset_bottom = 3460.0
+texture = ExtResource("3_ed4nj")
+stretch_mode = 1
 
 [node name="Label" type="Label" parent="." unique_id=2592416]
 layout_mode = 1

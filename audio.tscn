@@ -22,6 +22,7 @@ script = ExtResource("1_qc0l7")
 
 [node name="Mainm" type="AudioStreamPlayer" parent="." unique_id=2059363555]
 stream = ExtResource("2_f6syg")
+bus = &"Menu"
 
 [node name="Hover" type="AudioStreamPlayer" parent="." unique_id=1225621221]
 stream = ExtResource("2_fajnq")
@@ -43,7 +44,6 @@ bus = &"Music"
 [node name="MenuTheme" type="AudioStreamPlayer" parent="." unique_id=181046176]
 stream = ExtResource("6_iet0q")
 volume_db = 24.0
-bus = &"menu"
 
 [node name="Radar" type="AudioStreamPlayer" parent="." unique_id=87248990]
 stream = ExtResource("7_v84do")

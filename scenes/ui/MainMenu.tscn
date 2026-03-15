@@ -1,7 +1,12 @@
 [gd_scene format=3 uid="uid://bu7m7tjsrqw8c"]
 
 [ext_resource type="Script" uid="uid://b72u0wy3ls5kp" path="res://scenes/ui/main_menu.gd" id="1_vjtqc"]
+[ext_resource type="Shader" uid="uid://c17dgnslw5167" path="res://scripts/shader/scroll.gdshader" id="2_2ysvc"]
 [ext_resource type="FontFile" uid="uid://dasc61xev86m4" path="res://sprites/DS-DIGI.TTF" id="2_6jbdy"]
+[ext_resource type="Texture2D" uid="uid://4u1a6ybittr6" path="res://sprites/JustStars.png" id="3_xpiny"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bhu4a"]
+shader = ExtResource("2_2ysvc")
 
 [node name="MainMenu" type="Control" unique_id=666836823]
 layout_mode = 3
@@ -11,6 +16,16 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_vjtqc")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1270158994]
+material = SubResource("ShaderMaterial_bhu4a")
+layout_mode = 0
+offset_left = -3262.0
+offset_top = -2321.0
+offset_right = 5269.0
+offset_bottom = 3460.0
+texture = ExtResource("3_xpiny")
+stretch_mode = 1
 
 [node name="Label" type="Label" parent="." unique_id=430664472]
 layout_mode = 1
