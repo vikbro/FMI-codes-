@@ -25,4 +25,5 @@ func _on_body_entered(body: Node2D):
 		var health = body.get_node_or_null("HealthComponent") as HealthComponent
 		if health:
 			health.take_damage(_stats.damage)
+			Global_Audio.shoot.play()
 		queue_free()

@@ -10,10 +10,11 @@
 [ext_resource type="PackedScene" path="res://scenes/planets/Planet.tscn" id="8_cvmbd"]
 [ext_resource type="PackedScene" path="res://scenes/sattelites/Sattelite.tscn" id="9_ft6cd"]
 [ext_resource type="Texture2D" uid="uid://dmqnm3p74clgl" path="res://sprites/test2.png" id="10_a8y0u"]
-[ext_resource type="PackedScene" path="res://enemy.tscn" id="10_choun"]
+[ext_resource type="PackedScene" uid="uid://b0dc2vemuu2ry" path="res://enemy.tscn" id="10_choun"]
 [ext_resource type="Script" path="res://scenes/path_2d.gd" id="10_trceg"]
 [ext_resource type="Script" uid="uid://dlrucoharmrnc" path="res://scenes/path_follow_2d.gd" id="10_ya4ey"]
 [ext_resource type="Script" path="res://scripts/resources/enemy_stats.gd" id="11_eb6dy"]
+[ext_resource type="Script" uid="uid://c4ea61m1qkv0u" path="res://scenes/camera_2d.gd" id="15_jkv2x"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jyhfs"]
 shader = ExtResource("1_q8u5g")
@@ -24,7 +25,7 @@ _data = {
 }
 point_count = 6
 
-[sub_resource type="Resource" id="Resource_a8y0u"]
+[sub_resource type="Resource" id="Resource_jbj1t"]
 resource_local_to_scene = true
 script = ExtResource("11_eb6dy")
 metadata/_custom_type_script = "uid://drlfsgh1axbge"
@@ -166,10 +167,11 @@ rotation = 2.3514555
 script = ExtResource("10_ya4ey")
 
 [node name="Node2D" parent="Path2D/PathFollow2D" unique_id=1341819 instance=ExtResource("10_choun")]
-stats = SubResource("Resource_a8y0u")
+stats = SubResource("Resource_jbj1t")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1228366303]
 zoom = Vector2(0.25, 0.25)
+script = ExtResource("15_jkv2x")
 
 [node name="Path2D2" type="Path2D" parent="." unique_id=482871658]
 visible = false
