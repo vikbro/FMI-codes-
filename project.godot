@@ -26,9 +26,9 @@ buses/default_bus_layout="uid://efl4tnrxe8fl"
 [autoload]
 
 ResourceManager="*uid://deofd828b350i"
-UpgradeManager="*uid://bsrxohkyyr8qx"
-Event="*uid://bhvvibrs50c6j"
 Global_Audio="*uid://qf70uj16ljop"
+Event="*uid://bhvvibrs50c6j"
+UpgradeManager="*uid://c8s25n7v1ikpm"
 
 [display]
 
