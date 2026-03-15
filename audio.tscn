@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://qf70uj16ljop"]
 
 [ext_resource type="Script" uid="uid://cd4t2bet86spf" path="res://audio.gd" id="1_qc0l7"]
+[ext_resource type="AudioStream" uid="uid://clhyrvk6sjg50" path="res://music/mainm.mp3" id="2_f6syg"]
 [ext_resource type="AudioStream" uid="uid://ddm76aq3dfcwd" path="res://music/hover.mp3" id="2_fajnq"]
 [ext_resource type="AudioStream" uid="uid://bptrarsp6ypg0" path="res://music/last_stand.mp3" id="3_f6syg"]
 [ext_resource type="AudioStream" uid="uid://ww250tpoqbim" path="res://music/launch.mp3" id="4_enkql"]
@@ -19,6 +20,9 @@
 [node name="Audio" type="Node2D" unique_id=2043896488]
 script = ExtResource("1_qc0l7")
 
+[node name="Mainm" type="AudioStreamPlayer" parent="." unique_id=2059363555]
+stream = ExtResource("2_f6syg")
+
 [node name="Hover" type="AudioStreamPlayer" parent="." unique_id=1225621221]
 stream = ExtResource("2_fajnq")
 bus = &"SFX"
@@ -33,6 +37,7 @@ bus = &"SFX"
 
 [node name="Lose" type="AudioStreamPlayer" parent="." unique_id=252049365]
 stream = ExtResource("5_il71m")
+volume_db = -26.456
 bus = &"Music"
 
 [node name="MenuTheme" type="AudioStreamPlayer" parent="." unique_id=181046176]
