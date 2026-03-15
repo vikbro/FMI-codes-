@@ -13,10 +13,11 @@ radius = 13.0
 curve = SubResource("Curve2D_mmnps")
 script = ExtResource("1_m7l0n")
 
-[node name="Sattelite" type="PathFollow2D" parent="." unique_id=1093051201]
+[node name="Sattelite" type="PathFollow2D" parent="." unique_id=1093051201 groups=["Turret"]]
 rotates = false
 script = ExtResource("2_5usku")
-base_orbit_fraction = 3.5
+orbit_speed = 0.67
+base_orbit_fraction = 3.0
 
 [node name="Area2D" type="Area2D" parent="Sattelite" unique_id=254811888]
 collision_layer = 32

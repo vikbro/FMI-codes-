@@ -1,5 +1,6 @@
 @tool
 extends Path2D
+class_name SateliteOrbit
 
 const BEZIER_C := 0.5522847
 

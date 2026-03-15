@@ -24,10 +24,9 @@ buses/default_bus_layout="uid://efl4tnrxe8fl"
 
 [autoload]
 
-Event="*uid://dkmiy275bnsxe"
-Signals="*uid://bjs3tltsgdhmn"
 ResourceManager="*uid://deofd828b350i"
 UpgradeManager="*uid://bsrxohkyyr8qx"
+Event="*uid://bhvvibrs50c6j"
 
 [file_customization]
 
@@ -47,6 +46,7 @@ Event="*uid://dkmiy275bnsxe"
 [global_group]
 
 enemies=""
+Planet=""
 
 [layer_names]
 

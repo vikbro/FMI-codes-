@@ -2,13 +2,15 @@
 
 [ext_resource type="PackedScene" uid="uid://cly8u8om5uh2u" path="res://scenes/planets/Planet.tscn" id="1_4tq74"]
 [ext_resource type="PackedScene" uid="uid://bdqll456gsmki" path="res://scenes/sattelites/Sattelite.tscn" id="2_hpm3g"]
+[ext_resource type="Script" uid="uid://b0y67w4vxto2q" path="res://scripts/enemy_spawner.gd" id="3_2b4x4"]
+[ext_resource type="PackedScene" uid="uid://7p1c7ndgvy6g" path="res://enemy.tscn" id="4_j45hg"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hpm3g"]
 radius = 94.14512
 
-[sub_resource type="Curve2D" id="Curve2D_hpm3g"]
+[sub_resource type="Curve2D" id="Curve2D_j45hg"]
 _data = {
-"points": PackedVector2Array(0, -165.68541, 0, 165.68541, 547, 209, 165.68541, -1.014497e-14, -165.68541, 1.014497e-14, 247, 509, 2.028994e-14, 165.68541, -2.028994e-14, -165.68541, -53, 209, -165.68541, 3.043491e-14, 165.68541, -3.043491e-14, 247, -91, 0, -165.68541, 0, 165.68541, 547, 209)
+"points": PackedVector2Array(0, -82.842705, 0, 82.842705, 397, 209, 82.842705, -5.072485e-15, -82.842705, 5.072485e-15, 247, 359, 1.014497e-14, 82.842705, -1.014497e-14, -82.842705, 97, 209, -82.842705, 1.5217455e-14, 82.842705, -1.5217455e-14, 247, 59, 0, -82.842705, 0, 82.842705, 397, 209)
 }
 point_count = 5
 
@@ -26,8 +28,14 @@ shape = SubResource("CircleShape2D_hpm3g")
 position = Vector2(247, 209)
 
 [node name="SatteliteOrbit" parent="." unique_id=295821271 node_paths=PackedStringArray("current_planet") instance=ExtResource("2_hpm3g")]
-curve = SubResource("Curve2D_hpm3g")
+curve = SubResource("Curve2D_j45hg")
 current_planet = NodePath("../Planet")
 
 [node name="Planet2" parent="." unique_id=1252246480 instance=ExtResource("1_4tq74")]
 position = Vector2(896, 594)
+
+[node name="Node" type="Node2D" parent="." unique_id=1368873393]
+position = Vector2(1071, 48)
+script = ExtResource("3_2b4x4")
+enemy_scene = ExtResource("4_j45hg")
+spawn_interval = 2.0

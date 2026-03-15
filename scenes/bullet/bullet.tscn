@@ -1,17 +1,20 @@
 [gd_scene format=3 uid="uid://h70hiyxjfypl"]
 
 [ext_resource type="Script" uid="uid://wo80kgon4bn3" path="res://scripts/bullet.gd" id="1_7c8un"]
-[ext_resource type="Texture2D" uid="uid://dsn11jgf1phpx" path="res://sprites/icon.svg" id="2_83itf"]
+[ext_resource type="Texture2D" uid="uid://nd5k15btymm3" path="res://sprites/blue/Untitled_Artwork(1).png" id="2_83itf"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c6pnf"]
 radius = 5.0
-height = 51.997486
+height = 31.998453
 
 [node name="Bullet" type="Area2D" unique_id=547939169]
+collision_layer = 4
+collision_mask = 8
 script = ExtResource("1_7c8un")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=865764260]
-scale = Vector2(0.42523706, 0.08413345)
+rotation = 1.5707964
+scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_83itf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=232001978]
