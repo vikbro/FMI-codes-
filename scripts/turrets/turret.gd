@@ -23,3 +23,10 @@ func _process(_delta: float) -> void:
 		shoot_component.target = null
 		return
 	rotation = (target.global_position - global_position).angle()
+
+# Add to your existing turret.gd
+
+func _on_area_input_event(_viewport, event: InputEvent, _shape_idx) -> void:
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		if UpgradeManager.is_placing():
+			UpgradeManager.try_apply_to_turret(self)

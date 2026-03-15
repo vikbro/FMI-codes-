@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="UpgradePoolData" format=3 uid="uid://cvrtmbb1c2hqp"]
+
+[ext_resource type="Script" uid="uid://cjq0rhgx2r10g" path="res://scripts/resources/upgrade_pool_data.gd" id="1_gtf4q"]
+[ext_resource type="PackedScene" uid="uid://b7q3m4p3x5ncr" path="res://scenes/upgrades/RadiusUpgrade.tscn" id="2_nwqkf"]
+[ext_resource type="PackedScene" uid="uid://jwhocsd2g1gj" path="res://scenes/upgrades/MultipleBulletsUpgrade.tscn" id="3_nwqkf"]
+[ext_resource type="PackedScene" uid="uid://cueslbbl6eibe" path="res://scenes/upgrades/DamageUpgrade.tscn" id="4_lbov0"]
+
+[resource]
+script = ExtResource("1_gtf4q")
+upgrades = Array[PackedScene]([ExtResource("4_lbov0"), ExtResource("3_nwqkf"), ExtResource("2_nwqkf"), ExtResource("2_nwqkf"), ExtResource("2_nwqkf")])
+metadata/_custom_type_script = "uid://cjq0rhgx2r10g"

@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bsrxohkyyr8qx"]
+
+[ext_resource type="Script" uid="uid://cofo6bpufv0" path="res://scripts/globals/upgrade_manager.gd" id="1_fv0wn"]
+[ext_resource type="Resource" uid="uid://cvrtmbb1c2hqp" path="res://data/upgrade_pool.tres" id="2_xl2lq"]
+
+[node name="UpgradeManager" type="Node" unique_id=304693086]
+script = ExtResource("1_fv0wn")
+upgrade_pool_data = ExtResource("2_xl2lq")

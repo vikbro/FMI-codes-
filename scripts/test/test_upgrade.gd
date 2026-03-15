@@ -28,3 +28,7 @@ func _on_multishot_upgrade():
 	var upgrade = TripleShotUpgrade.new()
 	turret.add_child(upgrade)
 	print("Bullet count is now: ", turret.bullet_stats.bullet_count)
+
+func _on_button_4_pressed() -> void:
+	UpgradeManager.offer_upgrades()
+	pass # Replace with function body.

@@ -5,9 +5,9 @@
 [ext_resource type="Script" uid="uid://dg0juust2ync2" path="res://scripts/components/detection_component.gd" id="2_xmtae"]
 [ext_resource type="Script" uid="uid://bluj55vawy5hu" path="res://scripts/components/health_component.gd" id="3_iduhk"]
 [ext_resource type="Resource" uid="uid://b376u7k3hncms" path="res://data/default_bullet.tres" id="3_rnh5d"]
-[ext_resource type="Texture2D" uid="uid://bc1jec6jdj1j2" path="res://sprites/turrets/Space_buddy.png" id="4_rnh5d"]
+[ext_resource type="Texture2D" uid="uid://ek0ingje452x" path="res://sprites/blue/Space_buddy(1).png" id="4_rnh5d"]
 [ext_resource type="Script" uid="uid://4plc0lay42xk" path="res://scripts/components/shoot_component.gd" id="4_v4lwv"]
-[ext_resource type="PackedScene" uid="uid://byssa0lwbb3ts" path="res://scenes/bullet/Bullet.tscn" id="8_t4bc6"]
+[ext_resource type="PackedScene" path="res://scenes/bullet/Bullet.tscn" id="8_t4bc6"]
 [ext_resource type="Script" uid="uid://xvocnikxrcq" path="res://scripts/components/resource_generator_component.gd" id="10_31x2x"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_v4lwv"]

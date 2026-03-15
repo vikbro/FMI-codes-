@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://dllrjvvf4y1va"]
+
+[ext_resource type="Script" uid="uid://sh6txxxqkxx7" path="res://scenes/ui/upgrade_selection_menu.gd" id="1_cv2ys"]
+[ext_resource type="FontFile" uid="uid://dasc61xev86m4" path="res://sprites/DS-DIGI.TTF" id="1_pedha"]
+[ext_resource type="PackedScene" uid="uid://chbqjdoda5sq4" path="res://scenes/ui/Upgrade.tscn" id="2_lj64f"]
+
+[node name="UpgradeSelectionMenu" type="Control" unique_id=1156196769]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -563.0
+offset_bottom = -234.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_cv2ys")
+upgrade_ui_scene = ExtResource("2_lj64f")
+
+[node name="Panel" type="Panel" parent="." unique_id=930124802]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=421626265]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/VBoxContainer" unique_id=1311627147]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="UpgradeFlowContainer" type="HFlowContainer" parent="Panel/VBoxContainer" unique_id=800578113]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/h_separation = 16
+alignment = 1
+
+[node name="UpgradeUI" parent="Panel/VBoxContainer/UpgradeFlowContainer" unique_id=480513319 instance=ExtResource("2_lj64f")]
+layout_mode = 2
+
+[node name="UpgradeUI2" parent="Panel/VBoxContainer/UpgradeFlowContainer" unique_id=1469343688 instance=ExtResource("2_lj64f")]
+layout_mode = 2
+
+[node name="UpgradeDescription" type="Label" parent="Panel/VBoxContainer" unique_id=751569066]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="SelectBtn" type="Button" parent="Panel/VBoxContainer" unique_id=2055329951]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("1_pedha")
+text = "SELECT"

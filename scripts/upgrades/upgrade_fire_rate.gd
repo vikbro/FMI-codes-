@@ -1,8 +1,7 @@
 class_name FireRateUpgrade
-extends Node
+extends UpgradeBase
 
 @export var multiplier: float = 2.0
 
-func _ready():
-	var turret = get_parent() as Turret
+func apply(turret: Turret) -> void:
 	turret.stats.fire_rate *= multiplier

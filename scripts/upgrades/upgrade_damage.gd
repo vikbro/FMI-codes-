@@ -1,8 +1,7 @@
 class_name DamageUpgrade
-extends Node
+extends UpgradeBase
 
 @export var bonus: float = 10.0
 
-func _ready():
-	var turret = get_parent() as Turret
+func apply(turret: Turret) -> void:
 	turret.bullet_stats.damage += bonus

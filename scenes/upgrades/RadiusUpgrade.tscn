@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://b7q3m4p3x5ncr"]
+
+[ext_resource type="Script" uid="uid://cgjbji2txo7os" path="res://scripts/upgrades/upgrade_radius.gd" id="1_c5kbk"]
+
+[node name="RadiusUpgrade" type="Node" unique_id=755736270]
+script = ExtResource("1_c5kbk")
+upgrade_name = "More radius"
+description = "Upgrades the radius of the turret area"

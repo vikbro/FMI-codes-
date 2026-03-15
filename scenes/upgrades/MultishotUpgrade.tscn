@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://b0ohrsao4i1uk"]
+
+[ext_resource type="Script" uid="uid://dmql44wl7agf1" path="res://scripts/upgrades/upgrade_triple_shot.gd" id="1_0igdp"]
+
+[node name="MultishotUpgrade" type="Node" unique_id=755736270]
+script = ExtResource("1_0igdp")
+description = "Multishot Description"

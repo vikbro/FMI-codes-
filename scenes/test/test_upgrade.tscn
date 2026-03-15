@@ -1,7 +1,8 @@
-[gd_scene format=3 uid="uid://bq14r5x4kul56"]
+[gd_scene format=3 uid="uid://bo34fhj7uy0sp"]
 
 [ext_resource type="Script" uid="uid://isj20t524rfr" path="res://scripts/test/test_upgrade.gd" id="1_m6svf"]
 [ext_resource type="PackedScene" uid="uid://c2tbkvy45svui" path="res://scenes/turret/Turret.tscn" id="2_x03ek"]
+[ext_resource type="PackedScene" uid="uid://dllrjvvf4y1va" path="res://scenes/ui/UpgradeSelectionMenu.tscn" id="3_8ydas"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_k3cig"]
 radius = 27.294687
@@ -36,5 +37,23 @@ layout_mode = 2
 text = "Damage multishot
 "
 
+[node name="Button4" type="Button" parent="CanvasLayer/HBoxContainer" unique_id=256325960]
+layout_mode = 2
+text = "initiate upgrade
+"
+
 [node name="Turret" parent="." unique_id=745407530 instance=ExtResource("2_x03ek")]
 position = Vector2(610, 324)
+
+[node name="UpgradeSelectionMenu" parent="." unique_id=1156196769 instance=ExtResource("3_8ydas")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 6.0
+offset_top = 207.0
+offset_right = 667.0
+offset_bottom = 611.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/Button4" to="." method="_on_button_4_pressed"]

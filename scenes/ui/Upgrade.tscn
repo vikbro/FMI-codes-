@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://chbqjdoda5sq4"]
+
+[ext_resource type="Script" uid="uid://ch620jhxfskmw" path="res://scripts/ui/upgrade_ui.gd" id="1_ci35g"]
+[ext_resource type="Texture2D" uid="uid://nd5k15btymm3" path="res://sprites/blue/Untitled_Artwork(1).png" id="2_3rhlv"]
+[ext_resource type="FontFile" uid="uid://dasc61xev86m4" path="res://sprites/DS-DIGI.TTF" id="3_fbocq"]
+[ext_resource type="Texture2D" uid="uid://bex1n6df2u1ww" path="res://sprites/ui/FinalUIText.png" id="4_4eviu"]
+
+[node name="UpgradeUI" type="Control" unique_id=480513319]
+custom_minimum_size = Vector2(250, 350)
+layout_mode = 3
+anchors_preset = 0
+mouse_filter = 1
+script = ExtResource("1_ci35g")
+
+[node name="Panel" type="Panel" parent="." unique_id=1184825424]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=810660193]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="TextureRect" type="TextureRect" parent="Panel/MarginContainer" unique_id=1966842219]
+layout_mode = 2
+texture = ExtResource("2_3rhlv")
+expand_mode = 4
+stretch_mode = 5
+
+[node name="MarginContainer2" type="MarginContainer" parent="Panel" unique_id=1061572814]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+
+[node name="UpgradeName" type="RichTextLabel" parent="Panel/MarginContainer2" unique_id=1774555190]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/normal_font = ExtResource("3_fbocq")
+theme_override_fonts/bold_font = ExtResource("3_fbocq")
+theme_override_font_sizes/normal_font_size = 32
+text = "Placeholder"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Panel" unique_id=1040992189]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_4eviu")
+expand_mode = 4

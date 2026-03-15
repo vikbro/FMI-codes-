@@ -27,6 +27,7 @@ buses/default_bus_layout="uid://efl4tnrxe8fl"
 Signals="*uid://bjs3tltsgdhmn"
 Event="*uid://dkmiy275bnsxe"
 ResourceManager="*uid://deofd828b350i"
+UpgradeManager="*uid://bsrxohkyyr8qx"
 
 [file_customization]
 
