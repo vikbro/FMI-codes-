@@ -1,3 +1,34 @@
 [gd_scene format=3 uid="uid://bdlmk6hnib85s"]
 
+[ext_resource type="PackedScene" uid="uid://c7twpgtb4ud18" path="res://moving camera.tscn" id="1_u7djx"]
+[ext_resource type="PackedScene" uid="uid://cly8u8om5uh2u" path="res://scenes/planets/Planet.tscn" id="2_228jm"]
+[ext_resource type="Script" uid="uid://b0y67w4vxto2q" path="res://scripts/enemy_spawner.gd" id="3_teypr"]
+[ext_resource type="PackedScene" uid="uid://b0dc2vemuu2ry" path="res://enemy.tscn" id="4_sjaf3"]
+
 [node name="SolarSystem" type="Node2D" unique_id=365881248]
+
+[node name="CharacterBody2D" parent="." unique_id=171581521 instance=ExtResource("1_u7djx")]
+position = Vector2(525, 461)
+collision_layer = 256
+collision_mask = 256
+
+[node name="Planet3" parent="." unique_id=459783841 instance=ExtResource("2_228jm")]
+position = Vector2(73, 486)
+gravity_radius = 500.0
+planet_scale = 0.1
+
+[node name="Planet2" parent="." unique_id=2037962681 instance=ExtResource("2_228jm")]
+position = Vector2(1329, 870)
+planet_scale = 0.1
+
+[node name="Enemy Spawn" type="Node2D" parent="." unique_id=445545264]
+position = Vector2(2087, 282)
+script = ExtResource("3_teypr")
+enemy_scene = ExtResource("4_sjaf3")
+spawn_interval = 2.0
+
+[node name="Enemy Spawn2" type="Node2D" parent="." unique_id=1666180162]
+position = Vector2(-810, 132)
+script = ExtResource("3_teypr")
+enemy_scene = ExtResource("4_sjaf3")
+spawn_interval = 2.0

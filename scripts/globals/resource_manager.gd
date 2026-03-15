@@ -2,7 +2,7 @@ extends Node
 
 signal resources_changed(total: float)
 
-var total_resources: float = 0.0
+var total_resources: float = 30
 
 func deposit(amount: float) -> void:
 	total_resources += amount

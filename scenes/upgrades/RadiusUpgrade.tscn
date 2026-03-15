@@ -6,3 +6,5 @@
 script = ExtResource("1_c5kbk")
 upgrade_name = "More radius"
 description = "Upgrades the radius of the turret area"
+base_cost = 3.0
+cost_multiplier = 1.2

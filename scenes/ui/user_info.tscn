@@ -2,10 +2,15 @@
 
 [ext_resource type="Texture2D" uid="uid://bex1n6df2u1ww" path="res://sprites/ui/FinalUIText.png" id="1_bkxlf"]
 [ext_resource type="FontFile" uid="uid://dasc61xev86m4" path="res://sprites/DS-DIGI.TTF" id="2_bkxlf"]
-[ext_resource type="Script" path="res://scripts/ui/research_ui.gd" id="2_bna67"]
+[ext_resource type="Script" uid="uid://bl5n6rdoovurp" path="res://scripts/ui/research_ui.gd" id="2_bna67"]
 [ext_resource type="Texture2D" uid="uid://cwoaqolxapti5" path="res://sprites/icons/Magnifier.png" id="3_bna67"]
 [ext_resource type="Texture2D" uid="uid://cuwgqeg1whu2d" path="res://sprites/ui/Ui1.png" id="4_bna67"]
-[ext_resource type="PackedScene" path="res://scenes/ui/UpgradeSelectionMenu.tscn" id="6_pvibf"]
+[ext_resource type="PackedScene" uid="uid://ct21lcsw1rs2j" path="res://scenes/ui/UpgradeSelectionMenu.tscn" id="6_pvibf"]
+[ext_resource type="Texture2D" uid="uid://cey4x0milxsa8" path="res://sprites/blue/Ui4.png" id="7_bh2g3"]
+[ext_resource type="Script" uid="uid://dkt5qee7lp5lj" path="res://scenes/ui/upgrades.gd" id="8_ybqoc"]
+[ext_resource type="PackedScene" uid="uid://cueslbbl6eibe" path="res://scenes/upgrades/DamageUpgrade.tscn" id="9_qa4ve"]
+[ext_resource type="PackedScene" uid="uid://b7q3m4p3x5ncr" path="res://scenes/upgrades/RadiusUpgrade.tscn" id="10_1ewrd"]
+[ext_resource type="PackedScene" uid="uid://jwhocsd2g1gj" path="res://scenes/upgrades/MultipleBulletsUpgrade.tscn" id="11_heac4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pvibf"]
 bg_color = Color(0.1288298, 0.1288298, 0.12882975, 0.3019608)
@@ -91,7 +96,91 @@ expand_icon = true
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=573893481]
 
 [node name="UpgradeSelectionMenu" parent="." unique_id=1156196769 instance=ExtResource("6_pvibf")]
+visible = false
 offset_left = 46.0
 offset_top = 165.0
 offset_right = -517.0
 offset_bottom = -69.0
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=2102719618]
+offset_left = 2.9999995
+offset_top = 484.0
+offset_right = 773.0
+offset_bottom = 1293.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("7_bh2g3")
+script = ExtResource("8_ybqoc")
+damage_upgrade_scene = ExtResource("9_qa4ve")
+radius_upgrade_scene = ExtResource("10_1ewrd")
+triple_shot_upgrade_scene = ExtResource("11_heac4")
+
+[node name="Button" type="Button" parent="TextureRect2" unique_id=1577457627]
+layout_mode = 0
+offset_left = 147.5
+offset_top = 92.49999
+offset_right = 307.5
+offset_bottom = 375.0
+disabled = true
+
+[node name="Button2" type="Button" parent="TextureRect2" unique_id=2107328191]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 92.49999
+offset_right = 422.5
+offset_bottom = 232.5
+disabled = true
+
+[node name="Button3" type="Button" parent="TextureRect2" unique_id=1751379098]
+layout_mode = 0
+offset_left = 432.5
+offset_top = 94.99999
+offset_right = 535.0
+offset_bottom = 235.0
+disabled = true
+
+[node name="Button4" type="Button" parent="TextureRect2" unique_id=1044162039]
+layout_mode = 0
+offset_left = 542.5
+offset_top = 97.49999
+offset_right = 645.0
+offset_bottom = 237.5
+disabled = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect2" unique_id=950421619]
+layout_mode = 0
+offset_left = 155.0
+offset_top = -60.0
+offset_right = 649.99994
+offset_bottom = 35.0
+
+[node name="Label" type="Label" parent="TextureRect2/HBoxContainer" unique_id=891389684]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("2_bkxlf")
+theme_override_font_sizes/font_size = 52
+text = "0"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="TextureRect2/HBoxContainer" unique_id=2078711149]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("2_bkxlf")
+theme_override_font_sizes/font_size = 52
+text = "0"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="TextureRect2/HBoxContainer" unique_id=1425860]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("2_bkxlf")
+theme_override_font_sizes/font_size = 52
+text = "0"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="TextureRect2/HBoxContainer" unique_id=1605014630]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("2_bkxlf")
+theme_override_font_sizes/font_size = 52
+text = "0"
+horizontal_alignment = 1

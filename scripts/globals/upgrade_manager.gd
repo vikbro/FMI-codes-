@@ -1,49 +1,30 @@
+# Autoload as "UpgradeManager" in Project Settings.
 extends Node
 
-@export var upgrade_pool_data: UpgradePoolData
+var _pending_upgrade: UpgradeBase = null
 
-enum State { IDLE, CHOOSING, PLACING }
-
-signal upgrade_offer_ready(options: Array[PackedScene])
-signal upgrade_placed(turret: Turret)
-
-var state: State = State.IDLE
-var held_upgrade_scene: PackedScene = null
-var upgrade_pool: Array[PackedScene] = []
-
-func _ready() -> void:
-	if upgrade_pool_data:
-		upgrade_pool = upgrade_pool_data.upgrades.duplicate()
-
-func offer_upgrades() -> void:
-	if state != State.IDLE:
-		push_warning("UpgradeManager: tried to offer upgrades while not IDLE")
-		return
-	if upgrade_pool.size() < 2:
-		push_warning("UpgradeManager: not enough upgrades in pool")
-		return
-
-	state = State.CHOOSING
-	var pool_copy = upgrade_pool.duplicate()
-	pool_copy.shuffle()
-	var options: Array[PackedScene] = [pool_copy[0], pool_copy[1]]
-	upgrade_offer_ready.emit(options)
-
-func choose_upgrade(scene: PackedScene) -> void:
-	if state != State.CHOOSING:
-		return
-	held_upgrade_scene = scene
-	state = State.PLACING
-
-func try_apply_to_turret(turret: Turret) -> void:
-	if state != State.PLACING or held_upgrade_scene == null:
-		return
-	var upgrade = held_upgrade_scene.instantiate() as UpgradeBase
-	turret.add_child(upgrade)
-	upgrade.apply(turret)
-	held_upgrade_scene = null
-	state = State.IDLE
-	upgrade_placed.emit(turret)
+signal placement_changed(is_placing: bool)
+signal upgrade_offer_ready()
 
 func is_placing() -> bool:
-	return state == State.PLACING
+	return _pending_upgrade != null
+
+func begin_placement(upgrade: UpgradeBase) -> void:
+	_pending_upgrade = upgrade
+	placement_changed.emit(true)
+
+func cancel_placement() -> void:
+	_pending_upgrade = null
+	placement_changed.emit(false)
+
+func try_apply_to_turret(turret: Turret) -> void:
+	if _pending_upgrade == null:
+		return
+	var cost: float = _pending_upgrade.get_cost()
+	if not ResourceManager.spend(cost):
+		push_warning("UpgradeManager: not enough resources (need %.1f)" % cost)
+		cancel_placement()
+		return
+	_pending_upgrade.apply(turret)
+	_pending_upgrade.on_purchased()
+	cancel_placement()
