@@ -64,7 +64,7 @@ func _spawn_satelite(base_orbit_fraction: float, orbit_speed: float) -> void:
 	orbit_body.orbit_speed = orbit_speed
 	orbit_body.base_orbit_fraction = base_orbit_fraction
 	orbit_body.current_planet = self
-
+	Global_Audio.launch.play()
 	get_tree().current_scene.add_child(instance)
 
 func _update_shape() -> void:

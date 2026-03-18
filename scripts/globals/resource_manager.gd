@@ -5,6 +5,7 @@ signal resources_changed(total: float)
 var total_resources: float = 30
 
 func deposit(amount: float) -> void:
+	Global_Audio.typin.play()
 	total_resources += amount
 	resources_changed.emit(total_resources)
 

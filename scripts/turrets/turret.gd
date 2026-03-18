@@ -59,3 +59,4 @@ func _on_area_input_event(_viewport, event: InputEvent, _shape_idx) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		if UpgradeManager.is_placing():
 			UpgradeManager.try_apply_to_turret(self)
+			Global_Audio.radar.play()

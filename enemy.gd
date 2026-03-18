@@ -31,6 +31,7 @@ func _process(delta: float) -> void:
 		sprite.flip_h = direction.x < 0.0
 
 func take_damage(dmg: int) -> void:
+	Global_Audio.swoosh.play()
 	stats.health -= dmg
 	if stats.health <= 0:
 		queue_free()

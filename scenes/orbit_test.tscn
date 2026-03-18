@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bcdpwyiu4ro66" path="res://scenes/ui/user_info.tscn" id="4_bm780"]
 [ext_resource type="PackedScene" uid="uid://b0dc2vemuu2ry" path="res://enemy.tscn" id="4_j45hg"]
 [ext_resource type="PackedScene" uid="uid://c7twpgtb4ud18" path="res://moving camera.tscn" id="5_bm780"]
-[ext_resource type="Shader" uid="uid://c17dgnslw5167" path="res://scripts/shader/scroll.gdshader" id="6_katv0"]
+[ext_resource type="Shader" path="res://scripts/shader/scroll.gdshader" id="6_katv0"]
 [ext_resource type="Texture2D" uid="uid://4u1a6ybittr6" path="res://sprites/JustStars.png" id="7_p13cj"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_garwr"]

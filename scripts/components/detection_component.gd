@@ -20,6 +20,7 @@ func _on_area_entered(other_area: Area2D):
 		return
 	var enemy := other_area.get_parent()
 	if shoot_component.target == null:
+		Global_Audio.warning.play()
 		shoot_component.target = enemy
 
 func _on_area_exited(other_area: Area2D):

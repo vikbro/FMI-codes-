@@ -32,7 +32,7 @@ func _on_angle_submitted(text: String) -> void:
 	vy = (direction.y + R * cos(deg_to_rad(90 - L)) * cos(deg_to_rad(L - theta)))
 	vector = Vector2(x, y)
 	orbit_vector = Vector2(vx, vy)
-	#queue_redraw()
+	queue_redraw()
 
 	spawn_satelite_data.emit(abs(y/4), vx / 1000 )
 

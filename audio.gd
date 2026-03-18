@@ -1,6 +1,6 @@
 extends Node2D
 
-
+@onready var last_stand2: AudioStreamPlayer = $LastStand2
 @onready var mainm: AudioStreamPlayer = $Mainm
 @onready var hover: AudioStreamPlayer = $Hover
 @onready var last_stand: AudioStreamPlayer = $LastStand

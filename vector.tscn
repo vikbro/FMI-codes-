@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://xwvey418gd60"]
+[gd_scene format=3 uid="uid://7a8wx2tl6x7w"]
 
 [ext_resource type="Script" uid="uid://4ikfsnfi1sil" path="res://vector.gd" id="1_hm48i"]
 [ext_resource type="Script" path="res://line_edit.gd" id="2_nfnwc"]
@@ -29,5 +29,7 @@ offset_right = 122.5
 offset_bottom = -17.0
 script = ExtResource("2_nfnwc")
 metadata/_edit_use_anchors_ = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1311229709]
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

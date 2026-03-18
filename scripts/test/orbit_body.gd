@@ -103,7 +103,7 @@ func switch_orbit(new_planet: Node2D) -> void:
 	var new_radius := _calc_radius_for_planet(new_planet)
 	orbit_path.generate_orbit(new_planet.global_position, new_radius)
 	current_planet = new_planet
-
+	Global_Audio.radar.play()
 	var new_baked_length := orbit_path.curve.get_baked_length()
 	progress_ratio = _find_nearest_ratio(orbit_path.curve, world_pos)
 
@@ -117,7 +117,7 @@ func switch_orbit(new_planet: Node2D) -> void:
 		_speed_sign = -1.0
 	else:
 		_speed_sign = 1.0
-
+	
 	_switching = false
 
 func _find_nearest_ratio(c: Curve2D, world_pos: Vector2) -> float:

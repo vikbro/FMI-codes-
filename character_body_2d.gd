@@ -2,6 +2,10 @@ extends CharacterBody2D
 var input_direction
 const  speed = 500
 
+func _ready() -> void:
+	Global_Audio.last_stand2.stream.loop = true
+	Global_Audio.last_stand2.play()
+
 func get_input():
 	input_direction = Input.get_vector("camera_left", "camera_right", "camera_up", "camera_down")
 

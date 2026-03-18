@@ -18,6 +18,7 @@ func _process(delta: float):
 		_fire()
 
 func _fire():
+	Global_Audio.shoot.play()
 	var direction = (target.global_position - get_parent().global_position).normalized()
 	_fire_in_direction(direction)
 
